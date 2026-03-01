@@ -1,0 +1,261 @@
+---
+---
+
+<!-- Toggle button -->
+<button id="chatToggle" class="chat-toggle" aria-label="Abrir assistente">
+  <svg width="22" height="22" fill="none" viewBox="0 0 24 24">
+    <path d="M12 2C6.48 2 2 6.02 2 11c0 2.47 1.02 4.7 2.67 6.33L4 22l4.67-.67C9.99 21.77 10.99 22 12 22c5.52 0 10-4.02 10-9S17.52 2 12 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <span class="chat-toggle-label">Olá! Posso ajudar?</span>
+  <span class="chat-badge" id="chatBadge">1</span>
+</button>
+
+<!-- Chat window -->
+<div id="chatWindow" class="chat-window" aria-live="polite">
+  <div class="chat-header">
+    <div class="chat-header-info">
+      <div class="chat-avatar">
+        <svg width="18" height="18" fill="none" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10" stroke="url(#cg)" stroke-width="2"/>
+          <circle cx="9" cy="10" r="1.5" fill="#00d4ff"/>
+          <circle cx="15" cy="10" r="1.5" fill="#7c3aed"/>
+          <path d="M9 15s1 1.5 3 1.5 3-1.5 3-1.5" stroke="#10b981" stroke-width="1.5" stroke-linecap="round"/>
+          <defs>
+            <linearGradient id="cg" x1="0" y1="0" x2="24" y2="24">
+              <stop offset="0%" stop-color="#00d4ff"/>
+              <stop offset="100%" stop-color="#7c3aed"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div>
+        <div class="chat-name">Assistente ADC</div>
+        <div class="chat-status"><span class="status-dot"></span>Online</div>
+      </div>
+    </div>
+    <button id="chatClose" class="chat-close" aria-label="Fechar">
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24">
+        <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+
+  <div id="chatMessages" class="chat-messages"></div>
+
+  <div id="chatOptions" class="chat-options"></div>
+</div>
+
+<script>
+// ===========================
+// CHAT FLOW DEFINITION
+// ===========================
+const flow = {
+  start: {
+    message: "Olá! 👋 Bem-vindo à **Além do Código**.\n\nSomos uma empresa de tecnologia especializada em IA. Estou aqui para te apresentar quem somos e o que construímos.\n\nPor onde queres começar?",
+    options: [
+      { label: "👥 Quem são?", next: "quemSomos" },
+      { label: "🚀 Os nossos projetos", next: "projetos" },
+      { label: "📍 Localização & contacto", next: "contacto" },
+    ],
+  },
+  quemSomos: {
+    message: "Somos uma empresa de tecnologia e informação baseada em **Faro, Portugal**, especializada em Inteligência Artificial.\n\nNão somos uma consultora nem uma software house — construímos os nossos **próprios produtos** nas áreas do crédito, imobiliário e serviços financeiros.",
+    options: [
+      { label: "🚀 Ver os projetos", next: "projetos" },
+      { label: "💡 Que tecnologia usam?", next: "tecnologia" },
+      { label: "📍 Onde estão?", next: "contacto" },
+    ],
+  },
+  tecnologia: {
+    message: "Usamos **Inteligência Artificial** como vantagem competitiva real — não como jargão vazio.\n\nDesde modelos de linguagem (LLMs) a automação de processos, pesquisa semântica e análise de dados. Tudo construído internamente, nos nossos próprios produtos.",
+    options: [
+      { label: "🚀 Ver os projetos", next: "projetos" },
+      { label: "🏠 Voltar ao início", next: "start" },
+    ],
+  },
+  projetos: {
+    message: "Temos **4 projetos ativos** neste momento, todos nas áreas do crédito, imobiliário e serviços financeiros.\n\nQual queres conhecer?",
+    options: [
+      { label: "📋 CRMCredito.pt", next: "crmcredito" },
+      { label: "🏠 CréditoCasa.pt", next: "creditocasa" },
+      { label: "⚡ SimulaSite.pt", next: "simulasite" },
+      { label: "📄 PedeDirDocumentos.pt", next: "pededirdoc" },
+    ],
+  },
+  crmcredito: {
+    message: "**CRMCredito.pt** é uma plataforma CRM especializada para intermediários de crédito.\n\nCentraliza a gestão de processos, automatiza fluxos de trabalho e integra com bancos — com painéis de IA para análise de desempenho. Substitui as folhas de cálculo por um sistema inteligente.",
+    link: { label: "Visitar CRMCredito.pt →", url: "https://www.crmcredito.pt" },
+    options: [
+      { label: "← Ver outros projetos", next: "projetos" },
+      { label: "📍 Contacto", next: "contacto" },
+    ],
+  },
+  creditocasa: {
+    message: "**CréditoCasa.pt** é o primeiro portal em Portugal que combina pesquisa imobiliária com crédito habitação, usando IA.\n\nO utilizador descreve o que procura em linguagem natural e a IA encontra o imóvel e o financiamento ideal. Em pré-lançamento.",
+    link: { label: "Visitar CréditoCasa.pt →", url: "https://www.creditocasa.pt" },
+    options: [
+      { label: "← Ver outros projetos", next: "projetos" },
+      { label: "📍 Contacto", next: "contacto" },
+    ],
+  },
+  simulasite: {
+    message: "**SimulaSite.pt** é um SaaS que permite incorporar simuladores financeiros em qualquer site — sem programação.\n\nMais de 15 calculadoras disponíveis: crédito habitação, IMT, refinanciamento, e muito mais. Instalação em menos de 2 minutos.",
+    link: { label: "Visitar SimulaSite.pt →", url: "https://www.simulasite.pt" },
+    options: [
+      { label: "← Ver outros projetos", next: "projetos" },
+      { label: "📍 Contacto", next: "contacto" },
+    ],
+  },
+  pededirdoc: {
+    message: "**PedeDirDocumentos.pt** simplifica o pedido e gestão de documentos, tornando processos burocráticos mais rápidos e acessíveis — sem complicações.",
+    link: { label: "Em breve disponível", url: null },
+    options: [
+      { label: "← Ver outros projetos", next: "projetos" },
+      { label: "📍 Contacto", next: "contacto" },
+    ],
+  },
+  contacto: {
+    message: "Estamos em **Faro, Portugal** 📍\n\nR. Dom Francisco Gomes 4 1A\n8000-306, Faro\n\n📞 +351 967 015 157\n✉️ geral@alemdocodigo.pt",
+    options: [
+      { label: "🏠 Voltar ao início", next: "start" },
+      { label: "🚀 Ver projetos", next: "projetos" },
+    ],
+  },
+};
+
+// ===========================
+// CHAT LOGIC
+// ===========================
+const toggle = document.getElementById("chatToggle");
+const window_ = document.getElementById("chatWindow");
+const closeBtn = document.getElementById("chatClose");
+const messagesEl = document.getElementById("chatMessages");
+const optionsEl = document.getElementById("chatOptions");
+const badge = document.getElementById("chatBadge");
+
+let isOpen = false;
+let started = false;
+
+function openChat() {
+  isOpen = true;
+  window_.classList.add("open");
+  toggle.classList.add("active");
+  badge.style.display = "none";
+  if (!started) {
+    started = true;
+    setTimeout(() => goTo("start"), 400);
+  }
+}
+
+function closeChat() {
+  isOpen = false;
+  window_.classList.remove("open");
+  toggle.classList.remove("active");
+}
+
+toggle.addEventListener("click", () => isOpen ? closeChat() : openChat());
+closeBtn.addEventListener("click", closeChat);
+
+// Auto-open after delay
+setTimeout(() => {
+  toggle.classList.add("pulse");
+  setTimeout(openChat, 1200);
+}, 3000);
+
+function renderMarkdown(text) {
+  return text
+    .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+    .replace(/\n/g, "<br>");
+}
+
+function addBotMessage(text, linkObj) {
+  const msg = document.createElement("div");
+  msg.className = "msg msg-bot";
+  msg.innerHTML = `
+    <div class="msg-avatar">
+      <svg width="14" height="14" fill="none" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" stroke="url(#mg)" stroke-width="2"/>
+        <defs>
+          <linearGradient id="mg" x1="0" y1="0" x2="24" y2="24">
+            <stop offset="0%" stop-color="#00d4ff"/>
+            <stop offset="100%" stop-color="#7c3aed"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+    <div class="msg-bubble">${renderMarkdown(text)}${
+      linkObj
+        ? linkObj.url
+          ? `<a href="${linkObj.url}" target="_blank" rel="noopener" class="msg-link">${linkObj.label}</a>`
+          : `<span class="msg-link disabled">${linkObj.label}</span>`
+        : ""
+    }</div>
+  `;
+  messagesEl.appendChild(msg);
+  messagesEl.scrollTop = messagesEl.scrollHeight;
+  return msg;
+}
+
+function addUserMessage(text) {
+  const msg = document.createElement("div");
+  msg.className = "msg msg-user";
+  msg.innerHTML = `<div class="msg-bubble">${text}</div>`;
+  messagesEl.appendChild(msg);
+  messagesEl.scrollTop = messagesEl.scrollHeight;
+}
+
+function showTyping() {
+  const typing = document.createElement("div");
+  typing.className = "msg msg-bot msg-typing";
+  typing.id = "typingIndicator";
+  typing.innerHTML = `
+    <div class="msg-avatar">
+      <svg width="14" height="14" fill="none" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" stroke="#00d4ff" stroke-width="2"/>
+      </svg>
+    </div>
+    <div class="msg-bubble typing-dots">
+      <span></span><span></span><span></span>
+    </div>
+  `;
+  messagesEl.appendChild(typing);
+  messagesEl.scrollTop = messagesEl.scrollHeight;
+}
+
+function removeTyping() {
+  document.getElementById("typingIndicator")?.remove();
+}
+
+function renderOptions(options) {
+  optionsEl.innerHTML = "";
+  options.forEach((opt) => {
+    const btn = document.createElement("button");
+    btn.className = "chat-opt-btn";
+    btn.textContent = opt.label;
+    btn.addEventListener("click", () => {
+      addUserMessage(opt.label);
+      optionsEl.innerHTML = "";
+      setTimeout(() => {
+        showTyping();
+        setTimeout(() => {
+          removeTyping();
+          const state = flow[opt.next];
+          addBotMessage(state.message, state.link || null);
+          setTimeout(() => renderOptions(state.options), 200);
+        }, 900 + Math.random() * 400);
+      }, 300);
+    });
+    optionsEl.appendChild(btn);
+  });
+}
+
+function goTo(stateKey) {
+  showTyping();
+  setTimeout(() => {
+    removeTyping();
+    const state = flow[stateKey];
+    addBotMessage(state.message, state.link || null);
+    setTimeout(() => renderOptions(state.options), 300);
+  }, 1000);
+}
+</script>

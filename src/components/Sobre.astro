@@ -1,0 +1,138 @@
+---
+interface Props {
+  about: any;
+}
+
+const { about } = Astro.props;
+const c = about.code;
+---
+
+<section class="section" id="sobre">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-content">
+        <div class="section-tag">{about.tag}</div>
+        <h2 class="section-title">{about.titleBefore} <span class="gradient-text">{about.titleHighlight}</span></h2>
+        <p class="about-text">{about.text1}</p>
+        <p class="about-text">{about.text2}</p>
+
+        <div class="about-values">
+          {about.values.map((item: string) => (
+            <div class="value-item">
+              <span class="value-dot"></span>
+              {item}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="about-visual">
+        <div class="code-window">
+          <div class="code-titlebar">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="code-file">alemdocodigo.pt</span>
+          </div>
+
+          <pre class="code-block"><code><span class="c-keyword">const</span> <span class="c-var">adc</span> = {"{"}
+  <span class="c-key">{c.keyType}</span>: <span class="c-str">"{c.valueType}"</span>,
+  <span class="c-key">{c.keyLocation}</span>: <span class="c-str">"Faro, Portugal"</span>,
+  <span class="c-key">{c.keyFocus}</span>: [
+    <span class="c-str">"{c.valueFocus[0]}"</span>,
+    <span class="c-str">"{c.valueFocus[1]}"</span>,
+    <span class="c-str">"{c.valueFocus[2]}"</span>
+  ],
+  <span class="c-key">{c.keyTechnology}</span>: <span class="c-str">"{c.valueTechnology}"</span>,
+  <span class="c-key">{c.keyModel}</span>: <span class="c-str">"{c.valueModel}"</span>,
+  <span class="c-key">{c.keyBuild}</span>: <span class="c-fn">({c.ideaVar})</span> <span class="c-keyword">=&gt;</span> {"{"}
+    <span class="c-keyword">{c.returnWord}</span> {c.ideaVar}
+      .<span class="c-fn">{c.fnResearch}</span>()
+      .<span class="c-fn">{c.fnPrototype}</span>()
+      .<span class="c-fn">{c.fnLaunch}</span>()
+      .<span class="c-fn">{c.fnScale}</span>();
+  {"}"}
+{"}"};
+
+<span class="c-comment">// {c.comment}</span><span class="code-cursor"></span></code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  const codeEl = document.querySelector('#sobre .code-block code');
+  if (!codeEl) return;
+  const cursorEl = codeEl.querySelector('.code-cursor');
+  if (!cursorEl) return;
+
+  // Capture rendered nodes as tokens (i18n-aware: reads whatever Astro rendered)
+  const tokens: { cls?: string; text: string }[] = [];
+  codeEl.childNodes.forEach((node) => {
+    if (node === cursorEl) return;
+    if (node.nodeType === 3 && node.nodeValue) {
+      tokens.push({ text: node.nodeValue });
+    } else if (node.nodeType === 1) {
+      tokens.push({ cls: (node as Element).className, text: node.textContent || '' });
+    }
+  });
+
+  // Clear content, keep cursor
+  Array.from(codeEl.childNodes).forEach((n) => {
+    if (n !== cursorEl) codeEl.removeChild(n);
+  });
+  codeEl.appendChild(cursorEl);
+
+  let started = false;
+  function startTyping() {
+    if (started) return;
+    started = true;
+
+    let ti = 0, ci = 0;
+    let currentNode: Text | HTMLElement | null = null;
+
+    function tick() {
+      if (ti >= tokens.length) return;
+      const token = tokens[ti];
+      const char = token.text[ci];
+
+      if (ci === 0) {
+        if (token.cls) {
+          const el = document.createElement('span');
+          el.className = token.cls;
+          currentNode = el;
+        } else {
+          currentNode = document.createTextNode('');
+        }
+        codeEl.insertBefore(currentNode, cursorEl);
+      }
+
+      if (currentNode!.nodeType === 1) {
+        (currentNode as HTMLElement).textContent += char;
+      } else {
+        (currentNode as Text).nodeValue += char;
+      }
+
+      ci++;
+      if (ci >= token.text.length) { ti++; ci = 0; currentNode = null; }
+
+      const ws = char === '\n' || char === ' ';
+      setTimeout(tick, ws ? 4 : 16);
+    }
+
+    setTimeout(tick, 300);
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+      startTyping();
+      observer.disconnect();
+    }
+  }, { threshold: 0.25 });
+
+  const section = document.getElementById('sobre');
+  if (section) observer.observe(section);
+})();
+</script>

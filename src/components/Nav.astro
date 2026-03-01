@@ -1,0 +1,73 @@
+---
+import { getLanguageLinks, type Lang } from "../i18n/site";
+
+interface Props {
+  lang: Lang;
+  nav: {
+    about: string;
+    projects: string;
+    contact: string;
+    menuAria: string;
+    langAria: string;
+  };
+}
+
+const { lang, nav } = Astro.props;
+const langLinks = getLanguageLinks(lang);
+---
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <span class="logo-symbol">&lt;</span>além do código<span class="logo-symbol">/&gt;</span>
+    </a>
+
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#sobre">{nav.about}</a></li>
+        <li><a href="#projetos">{nav.projects}</a></li>
+        <li><a href="#contacto" class="btn-nav">{nav.contact}</a></li>
+      </ul>
+
+      <div class="lang-switcher" aria-label={nav.langAria}>
+        {langLinks.map((item) => (
+          <a
+            href={item.href}
+            class={`lang-link ${item.active ? "active" : ""}`}
+            aria-label={item.label}
+            aria-current={item.active ? "page" : undefined}
+            title={item.label}
+          >
+            <span class="lang-code" aria-hidden="true">{item.code.toUpperCase()}</span>
+            <span class="sr-only">{item.label}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-label={nav.menuAria}>
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="nav-mobile" id="navMobile">
+    <a href="#sobre">{nav.about}</a>
+    <a href="#projetos">{nav.projects}</a>
+    <a href="#contacto">{nav.contact}</a>
+
+    <div class="nav-mobile-langs" aria-label={nav.langAria}>
+      {langLinks.map((item) => (
+        <a
+          href={item.href}
+          class={`lang-link ${item.active ? "active" : ""}`}
+          aria-label={item.label}
+          aria-current={item.active ? "page" : undefined}
+          title={item.label}
+        >
+          <span class="lang-code" aria-hidden="true">{item.code.toUpperCase()}</span>
+          <span class="sr-only">{item.label}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</nav>
