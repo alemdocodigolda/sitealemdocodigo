@@ -402,6 +402,24 @@ if (navToggle && navMobile) {
   });
 })();
 
+// ---- Cookie banner ----
+(function initCookieBanner() {
+  if (localStorage.getItem('cookie-consent')) return;
+  const banner = document.getElementById('cookieBanner');
+  if (!banner) return;
+
+  setTimeout(() => banner.classList.add('visible'), 700);
+
+  function dismiss(value) {
+    banner.classList.remove('visible');
+    localStorage.setItem('cookie-consent', value);
+    setTimeout(() => banner.remove(), 500);
+  }
+
+  document.getElementById('cookieAccept').addEventListener('click', () => dismiss('accepted'));
+  document.getElementById('cookieReject').addEventListener('click', () => dismiss('rejected'));
+})();
+
 // ---- Smooth anchor scroll (Safari compat) ----
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
