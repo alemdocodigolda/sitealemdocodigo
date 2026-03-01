@@ -1,0 +1,89 @@
+{
+  "redirects": [
+    {
+      "source": "/creditocasa-pt/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/crm-intermediacao-de-credito/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/portinsurance-pt/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/one-insurance/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/backoffice-tuacasa-pt/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/direitolegal-pt/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/recomenda-pt/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/modelos/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/modelos_de_site/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/sites-para-intermediarios-de-credito/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/category/projetos/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/category/intermediacao-de-creditos/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/manutencao/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/politica-de-cookies-ue/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/politica-de-privacidade-lusoinvoice/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/wp-sitemap.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
+    },
+    {
+      "source": "/sitemap_index.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
+    }
+  ]
+}
