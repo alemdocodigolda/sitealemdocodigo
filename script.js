@@ -238,6 +238,8 @@ if (navToggle && navMobile) {
 
 // ---- Contact form ----
 (function initForm() {
+  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID';
+
   const form = document.getElementById('contactForm');
   if (!form) return;
   const status = document.getElementById('formStatus');
@@ -251,10 +253,11 @@ if (navToggle && navMobile) {
       missingMessage: 'Descreva o seu desafio.',
       shortMessage: 'A mensagem deve ter pelo menos 20 caracteres.',
       fixErrors: 'Verifique os campos assinalados antes de enviar.',
-      sendingButton: 'A simular envio...',
-      sendingStatus: 'A simular envio do formulário...',
-      successButton: 'Simulação concluída ✓',
-      successStatus: 'Simulação concluída. Como o formulário está em modo de demonstração, os dados não foram enviados.'
+      sendingButton: 'A enviar...',
+      sendingStatus: 'A enviar mensagem...',
+      successButton: 'Mensagem enviada ✓',
+      successStatus: 'Mensagem enviada com sucesso! Respondemos em menos de 24 horas.',
+      errorStatus: 'Erro ao enviar. Por favor tente novamente ou contacte-nos diretamente por email.'
     },
     en: {
       missingName: 'Please enter your name.',
@@ -264,10 +267,11 @@ if (navToggle && navMobile) {
       missingMessage: 'Please describe your challenge.',
       shortMessage: 'Message must have at least 20 characters.',
       fixErrors: 'Please review the highlighted fields before sending.',
-      sendingButton: 'Simulating submission...',
-      sendingStatus: 'Simulating form submission...',
-      successButton: 'Simulation complete ✓',
-      successStatus: 'Simulation complete. As this form is in demo mode, your data was not sent.'
+      sendingButton: 'Sending...',
+      sendingStatus: 'Sending your message...',
+      successButton: 'Message sent ✓',
+      successStatus: 'Message sent successfully! We\'ll reply within 24 hours.',
+      errorStatus: 'Failed to send. Please try again or contact us directly by email.'
     }
   };
   const t = formText[language];
@@ -297,7 +301,6 @@ if (navToggle && navMobile) {
     const field = requiredFields[name];
     const errorEl = errorElements[name];
     if (!field || !errorEl) return;
-
     field.setAttribute('aria-invalid', message ? 'true' : 'false');
     errorEl.textContent = message;
   }
@@ -334,7 +337,7 @@ if (navToggle && navMobile) {
     });
   });
 
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async e => {
     e.preventDefault();
     const errors = Object.keys(requiredFields).map(validateField).filter(Boolean);
     if (errors.length) {
@@ -355,22 +358,47 @@ if (navToggle && navMobile) {
       status.className = 'form-status';
     }
 
-    setTimeout(() => {
-      span.textContent = t.successButton;
-      btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
-      if (status) {
-        status.textContent = t.successStatus;
-        status.className = 'form-status success';
+    const nome = document.getElementById('nome').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const empresa = document.getElementById('empresa').value.trim();
+    const servico = document.getElementById('servico').value;
+    const mensagem = document.getElementById('mensagem').value.trim();
+
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nome, email, empresa, servico, mensagem })
+      });
+
+      if (res.ok) {
+        span.textContent = t.successButton;
+        btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+        if (status) {
+          status.textContent = t.successStatus;
+          status.className = 'form-status success';
+        }
+        setTimeout(() => {
+          span.textContent = original;
+          btn.disabled = false;
+          btn.style.background = '';
+          form.removeAttribute('aria-busy');
+          form.reset();
+          Object.keys(requiredFields).forEach(name => setFieldError(name, ''));
+          clearStatus();
+        }, 4000);
+      } else {
+        throw new Error('Server error');
       }
-      setTimeout(() => {
-        span.textContent = original;
-        btn.disabled = false;
-        btn.style.background = '';
-        form.removeAttribute('aria-busy');
-        form.reset();
-        Object.keys(requiredFields).forEach(name => setFieldError(name, ''));
-      }, 3200);
-    }, 1200);
+    } catch {
+      span.textContent = original;
+      btn.disabled = false;
+      form.removeAttribute('aria-busy');
+      if (status) {
+        status.textContent = t.errorStatus;
+        status.className = 'form-status error';
+      }
+    }
   });
 })();
 
