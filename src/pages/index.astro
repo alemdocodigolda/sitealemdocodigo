@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Nav.astro";
+import Hero from "../components/Hero.astro";
+import Sobre from "../components/Sobre.astro";
+import Projetos from "../components/Projetos.astro";
+import Contacto from "../components/Contacto.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+import { siteContent, type Lang } from "../i18n/site";
+
+const lang: Lang = "pt";
+const content = siteContent[lang];
+---
+
+<Layout lang={lang}>
+  <Nav lang={lang} nav={content.nav} />
+  <Hero hero={content.hero} />
+  <Sobre about={content.about} />
+  <Projetos projects={content.projects} />
+  <Contacto contact={content.contact} />
+  <Footer footer={content.footer} />
+  <script src="../scripts/main.js"></script>
+</Layout>

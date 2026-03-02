@@ -1,0 +1,52 @@
+---
+import { languageMeta, uiLanguages, siteContent, type Lang } from "../i18n/site";
+
+interface Props {
+  lang?: Lang;
+  title?: string;
+  description?: string;
+  canonicalPath?: string;
+}
+
+const {
+  lang = "pt",
+  title = siteContent[lang].layout.title,
+  description = siteContent[lang].layout.description,
+  canonicalPath = languageMeta[lang].path,
+} = Astro.props;
+
+const meta = languageMeta[lang];
+const canonicalUrl = `https://alemdocodigo.pt${canonicalPath}`;
+---
+
+<!doctype html>
+<html lang={meta.locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonicalUrl} />
+
+    {uiLanguages.map((code) => (
+      <link rel="alternate" hreflang={languageMeta[code].locale} href={`https://alemdocodigo.pt${languageMeta[code].path}`} />
+    ))}
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:locale" content={meta.ogLocale} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Sora:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
