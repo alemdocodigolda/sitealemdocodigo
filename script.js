@@ -238,7 +238,7 @@ if (navToggle && navMobile) {
 
 // ---- Contact form ----
 (function initForm() {
-  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID';
+  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mvzbnyjo';
 
   const form = document.getElementById('contactForm');
   if (!form) return;
