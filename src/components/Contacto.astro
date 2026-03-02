@@ -88,38 +88,42 @@ const validationTexts = {
         <form
           class="contact-form"
           id="contactForm"
-          action="https://formspree.io/f/mvzbnyjo"
+          action="https://formsubmit.co/ajax/andre@alemdocodigo.pt"
           method="POST"
           novalidate
         >
+          <input type="hidden" name="_subject" value="Novo Lead — Site Além do Código" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="box" />
+          <input type="hidden" name="_replyto" id="hidden-replyto" />
           <div class="cf-row">
             <div class="cf-group">
               <label for="cf-nome">{contact.form.nameLabel}</label>
-              <input type="text" id="cf-nome" name="nome" placeholder={contact.form.namePlaceholder} required />
+              <input type="text" id="cf-nome" name="Nome" placeholder={contact.form.namePlaceholder} required />
               <span class="cf-error" id="err-nome"></span>
             </div>
             <div class="cf-group">
               <label for="cf-empresa">{contact.form.companyLabel}</label>
-              <input type="text" id="cf-empresa" name="empresa" placeholder={contact.form.companyPlaceholder} />
+              <input type="text" id="cf-empresa" name="Empresa" placeholder={contact.form.companyPlaceholder} />
             </div>
           </div>
 
           <div class="cf-row">
             <div class="cf-group">
               <label for="cf-email">{contact.form.emailLabel}</label>
-              <input type="email" id="cf-email" name="email" placeholder={contact.form.emailPlaceholder} required />
+              <input type="email" id="cf-email" name="Email" placeholder={contact.form.emailPlaceholder} required />
               <span class="cf-error" id="err-email"></span>
             </div>
             <div class="cf-group">
               <label for="cf-contacto">{contact.form.contactLabel}</label>
-              <input type="tel" id="cf-contacto" name="contacto" placeholder={contact.form.contactPlaceholder} />
+              <input type="tel" id="cf-contacto" name="Telefone" placeholder={contact.form.contactPlaceholder} />
             </div>
           </div>
 
           <div class="cf-group">
             <label for="cf-servico">{contact.form.reasonLabel}</label>
             <div class="cf-select-wrap">
-              <select id="cf-servico" name="servico" required>
+              <select id="cf-servico" name="Serviço Pretendido" required>
                 <option value="">{contact.form.reasonPlaceholder}</option>
                 {contact.form.reasonOptions.map((opt: string) => (
                   <option>{opt}</option>
@@ -134,7 +138,7 @@ const validationTexts = {
 
           <div class="cf-group cf-group-grow">
             <label for="cf-msg">{contact.form.messageLabel}</label>
-            <textarea id="cf-msg" name="mensagem" placeholder={contact.form.messagePlaceholder} required></textarea>
+            <textarea id="cf-msg" name="Mensagem" placeholder={contact.form.messagePlaceholder} required></textarea>
             <span class="cf-error" id="err-msg"></span>
           </div>
 
@@ -239,6 +243,10 @@ const validationTexts = {
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
       if (!validateForm()) return;
+      // Sync reply-to with email field
+      const replyTo = document.getElementById("hidden-replyto");
+      const emailField = document.getElementById("cf-email");
+      if (replyTo && emailField) replyTo.value = emailField.value;
       const span = btn.querySelector(".cf-submit-text");
       btn.disabled = true;
       span.textContent = submitTexts.sending;
@@ -248,12 +256,14 @@ const validationTexts = {
         const res = await fetch(form.action, {
           method: "POST",
           headers: {
+            "Content-Type": "application/json",
             Accept: "application/json",
           },
-          body: new FormData(form),
+          body: JSON.stringify(Object.fromEntries(new FormData(form))),
         });
 
-        if (!res.ok) throw new Error();
+        const json = await res.json();
+        if (!res.ok || !json.success) throw new Error();
 
         span.textContent = submitTexts.success;
         btn.classList.remove("sending");

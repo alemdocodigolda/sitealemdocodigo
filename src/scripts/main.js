@@ -252,3 +252,25 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 revealEls.forEach(el => revealObserver.observe(el));
 
+// ===========================
+// STICKY CTA — hide when contact section is visible
+// ===========================
+const stickyCta = document.getElementById('stickyCta');
+const contactSection = document.getElementById('contacto');
+
+if (stickyCta && contactSection) {
+  // Scroll to the form panel, centered on screen
+  stickyCta.addEventListener('click', () => {
+    const formPanel = contactSection.querySelector('.contact-form-panel');
+    const target = formPanel || contactSection;
+    target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  const ctaObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      stickyCta.classList.toggle('hidden', e.isIntersecting);
+    });
+  }, { threshold: 0.15 });
+  ctaObserver.observe(contactSection);
+}
+

@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" -X POST \"https://formspree.io/f/mvzbnyjo\" -H \"Accept: application/json\" -H \"Content-Type: application/x-www-form-urlencoded\" -d \"nome=Teste+Claude&email=teste@teste.pt&servico=SimulaSite&mensagem=Teste+automatico+de+formulario\")",
+      "Bash(curl -s -X POST \"https://formspree.io/f/mvzbnyjo\" -H \"Accept: application/json\" -H \"Content-Type: application/x-www-form-urlencoded\" -d \"nome=Teste+Claude&email=teste@teste.pt&servico=SimulaSite&mensagem=Teste+automatico+de+formulario\")",
+      "WebFetch(domain:localhost)",
+      "Bash(curl -s http://localhost:4321/)",
+      "Bash(curl -s -X POST \"https://formspree.io/f/mvzbnyjo\" -H \"Accept: application/json\" -H \"Content-Type: application/x-www-form-urlencoded\" -d \"nome=Teste+Claude+Code&empresa=Alem+do+Codigo&email=andre@alemdocodigo.pt&contacto=+351967015157&servico=SimulaSite&mensagem=Teste+automatico+do+formulario+de+contacto.+Se+recebeste+este+email,+o+formulario+esta+a+funcionar+correctamente!\")"
+    ]
+  }
+}
