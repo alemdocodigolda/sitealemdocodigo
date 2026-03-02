@@ -414,6 +414,16 @@ export const siteContent: Record<Lang, SiteContent> = {
           tags: ["Documentos", "Automação", "Legal"],
         },
         {
+          name: "LusoInvoice",
+          url: "https://lusoinvoice.pt",
+          area: "FinTech · Faturação",
+          color: "green",
+          icon: "🧾",
+          description:
+            "App para Stripe que automatiza a emissão de faturas portuguesas via InvoiceXpress. Extração automática de IVA, sincronização por webhooks e criação de faturas diretamente do Stripe Dashboard.",
+          tags: ["Stripe", "Faturação", "InvoiceXpress", "Automação"],
+        },
+        {
           name: "Sites para Intermediários de Crédito",
           url: "https://alemdocodigo.pt/#contacto",
           area: "FinTech · Compliance BdP",
@@ -458,7 +468,7 @@ export const siteContent: Record<Lang, SiteContent> = {
         contactPlaceholder: "+351 9XX XXX XXX",
         reasonLabel: "O que te trouxe aqui?",
         reasonPlaceholder: "Selecionar...",
-        reasonOptions: ["CRM Crédito", "CréditoCasa.pt", "SimulaSite", "Pedir Documentos", "Sites para Intermediários de Crédito", "Parceria", "Outro"],
+        reasonOptions: ["CRM Crédito", "CréditoCasa.pt", "SimulaSite", "Pedir Documentos", "LusoInvoice (Brevemente)", "Sites para Intermediários de Crédito", "Parceria", "Outro"],
         messageLabel: "Mensagem",
         messagePlaceholder:
           "Tens alguma questão sobre os nossos produtos, ou queres explorar uma parceria?",
@@ -736,6 +746,16 @@ export const siteContent: Record<Lang, SiteContent> = {
           tags: ["Documents", "Automation", "Legal"],
         },
         {
+          name: "LusoInvoice",
+          url: "https://lusoinvoice.pt",
+          area: "FinTech · Invoicing",
+          color: "green",
+          icon: "🧾",
+          description:
+            "Stripe app that automates Portuguese invoice generation via InvoiceXpress. Automatic VAT extraction, webhook sync, and invoice creation directly from the Stripe Dashboard.",
+          tags: ["Stripe", "Invoicing", "InvoiceXpress", "Automation"],
+        },
+        {
           name: "Sites for Credit Intermediaries",
           url: "https://alemdocodigo.pt/en/#contacto",
           area: "FinTech · BdP Compliance",
@@ -780,7 +800,7 @@ export const siteContent: Record<Lang, SiteContent> = {
         contactPlaceholder: "+351 9XX XXX XXX",
         reasonLabel: "What brought you here?",
         reasonPlaceholder: "Select...",
-        reasonOptions: ["CRM Crédito", "CréditoCasa.pt", "SimulaSite", "Request Documents", "Sites for Credit Intermediaries", "Partnership", "Other"],
+        reasonOptions: ["CRM Crédito", "CréditoCasa.pt", "SimulaSite", "Request Documents", "LusoInvoice (Coming Soon)", "Sites for Credit Intermediaries", "Partnership", "Other"],
         messageLabel: "Message",
         messagePlaceholder:
           "Do you have questions about our products, or would you like to explore a partnership?",
