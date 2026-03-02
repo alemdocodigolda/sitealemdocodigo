@@ -1,0 +1,415 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Beyond Code — AI, Automation &amp; Digital Solutions</title><meta name="description" content="We build AI, automation, and digital products for companies that want to scale."><meta name="robots" content="index, follow"><link rel="canonical" href="https://alemdocodigo.pt/en/"><link rel="alternate" hreflang="pt-PT" href="https://alemdocodigo.pt/"><link rel="alternate" hreflang="en" href="https://alemdocodigo.pt/en/"><meta property="og:title" content="Beyond Code — AI, Automation &#38; Digital Solutions"><meta property="og:description" content="We build AI, automation, and digital products for companies that want to scale."><meta property="og:type" content="website"><meta property="og:url" content="https://alemdocodigo.pt/en/"><meta property="og:locale" content="en_GB"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/index.BP_0zM-w.css"></head> <body>  <nav class="nav" id="nav"> <div class="nav-inner"> <a href="#" class="logo"> <span class="logo-symbol">&lt;</span>além do código<span class="logo-symbol">/&gt;</span> </a> <div class="nav-right"> <ul class="nav-links"> <li><a href="#sobre">About</a></li> <li><a href="#projetos">Projects</a></li> <li><a href="#contacto" class="btn-nav">Contact</a></li> </ul> <div class="lang-switcher" aria-label="Select language"> <a href="/" class="lang-link " aria-label="Português" title="Português"> <span class="lang-code" aria-hidden="true">PT</span> <span class="sr-only">Português</span> </a><a href="/en/" class="lang-link active" aria-label="English" aria-current="page" title="English"> <span class="lang-code" aria-hidden="true">EN</span> <span class="sr-only">English</span> </a> </div> </div> <button class="nav-toggle" id="navToggle" aria-label="Menu"> <span></span><span></span><span></span> </button> </div> <div class="nav-mobile" id="navMobile"> <a href="#sobre">About</a> <a href="#projetos">Projects</a> <a href="#contacto">Contact</a> <div class="nav-mobile-langs" aria-label="Select language"> <a href="/" class="lang-link " aria-label="Português" title="Português"> <span class="lang-code" aria-hidden="true">PT</span> <span class="sr-only">Português</span> </a><a href="/en/" class="lang-link active" aria-label="English" aria-current="page" title="English"> <span class="lang-code" aria-hidden="true">EN</span> <span class="sr-only">English</span> </a> </div> </div> </nav> <section class="hero" id="hero"> <canvas id="particleCanvas"></canvas> <div class="hero-top"> <h1 class="hero-tagline"> We Build The <span class="gradient-text">Future</span><br>Of Credit And Real Estate </h1> </div> <div class="hero-chat-wrap"> <div class="hero-chat" id="heroChat"> <div class="hero-chat-header"> <div class="hero-chat-avatar"> <svg width="18" height="18" fill="none" viewBox="0 0 24 24"> <circle cx="12" cy="12" r="10" stroke="url(#hcg)" stroke-width="2"></circle> <circle cx="9" cy="10" r="1.5" fill="#00d4ff"></circle> <circle cx="15" cy="10" r="1.5" fill="#7c3aed"></circle> <path d="M9 15s1 1.5 3 1.5 3-1.5 3-1.5" stroke="#10b981" stroke-width="1.5" stroke-linecap="round"></path> <defs> <linearGradient id="hcg" x1="0" y1="0" x2="24" y2="24"> <stop offset="0%" stop-color="#00d4ff"></stop> <stop offset="100%" stop-color="#7c3aed"></stop> </linearGradient> </defs> </svg> </div> <div> <div class="hero-chat-name">ADC Assistant</div> <div class="hero-chat-status"><span class="status-dot"></span>Online now</div> </div> <div class="hero-chat-pills"> <span class="pill">FinTech</span><span class="pill">PropTech</span><span class="pill">AI</span> </div> </div> <div id="heroChatMessages" class="hero-chat-messages"></div> <div id="heroChatOptions" class="hero-chat-options"></div> <div class="hero-chat-input" id="heroChatInput"> <div class="hci-field" id="hciField"> <svg class="hci-icon" width="16" height="16" fill="none" viewBox="0 0 24 24"> <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </svg> <input type="text" id="hciInput" class="hci-real-input" placeholder="Type your question…" autocomplete="off" spellcheck="false"> </div> <button class="hci-send" id="hciSend" aria-label="Send"> <svg width="16" height="16" fill="none" viewBox="0 0 24 24"> <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </svg> </button> </div> </div> </div> <div class="hero-scroll-hint"> <span>Explore the site</span> <svg width="16" height="16" fill="none" viewBox="0 0 24 24"> <path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </svg> </div> </section> <script>(function(){const heroFlow = {"start":{"bubbles":["Hello! 👋 Welcome to **Beyond Code**.","We are a technology company focused on **Artificial Intelligence**. We build our own products in credit and real estate.","Where would you like to start?"],"options":[{"label":"👥 Who are you?","next":"quemSomos"},{"label":"🚀 Our projects","next":"projetos"},{"label":"📍 Location & contact","next":"contacto"}]},"quemSomos":{"bubbles":["We are a technology and information company based in **Faro, Portugal**.","We are not a consultancy or a software house. We build our **own products** in credit, real estate, and financial services.","AI is our real competitive advantage."],"options":[{"label":"🚀 View projects","next":"projetos"},{"label":"💡 What technology do you use?","next":"tecnologia"},{"label":"📍 Where are you located?","next":"contacto"}]},"tecnologia":{"bubbles":["We use **Artificial Intelligence** in a practical way: language models (LLMs), process automation, semantic search, and data analytics.","Everything is built in-house and integrated into our own products. No empty jargon, just results."],"options":[{"label":"🚀 View projects","next":"projetos"},{"label":"🔄 Back to start","next":"start"}]},"projetos":{"bubbles":["We currently have **5 active projects**, all focused on credit, real estate, and financial services.","Which one do you want to explore?"],"options":[{"label":"📋 CRMCredito.pt","next":"crmcredito"},{"label":"🏠 CréditoCasa.pt","next":"creditocasa"},{"label":"⚡ SimulaSite.pt","next":"simulasite"},{"label":"🌐 Sites for Intermediaries","next":"sitesIntermediarios"}]},"sitesIntermediarios":{"bubbles":["We build **professional websites** for credit intermediaries registered with Banco de Portugal.","Unique visual identity, mandatory legal content pre-configured, and digital presence from day one. Everything the regulator requires, with the design your business deserves."],"link":{"label":"Learn more & request a quote →","url":"https://alemdocodigo.pt/en/#contacto"},"options":[{"label":"← View other projects","next":"projetos"},{"label":"✉️ Contact us","next":"falarConnosco"}]},"crmcredito":{"bubbles":["**CRMCredito.pt** is a CRM platform built for credit intermediaries.","It centralizes processes, automates workflows, integrates with banks, and includes AI dashboards for performance analysis."],"link":{"label":"Visit CRMCredito.pt →","url":"https://www.crmcredito.pt"},"options":[{"label":"← View other projects","next":"projetos"},{"label":"📍 Contact","next":"contacto"}]},"creditocasa":{"bubbles":["**CréditoCasa.pt** is the first Portuguese portal combining property search with mortgage credit using AI.","Users describe what they need in natural language and AI finds the ideal property and financing."],"link":{"label":"Visit CréditoCasa.pt →","url":"https://www.creditocasa.pt"},"options":[{"label":"← View other projects","next":"projetos"},{"label":"📍 Contact","next":"contacto"}]},"simulasite":{"bubbles":["**SimulaSite.pt** is a SaaS platform that embeds financial simulators into any site, no coding required.","Over 15 calculators available. Setup in less than 2 minutes."],"link":{"label":"Visit SimulaSite.pt →","url":"https://www.simulasite.pt"},"options":[{"label":"← View other projects","next":"projetos"},{"label":"📍 Contact","next":"contacto"}]},"pededirdoc":{"bubbles":["**PedeDirDocumentos.pt** simplifies requesting and managing documents, making bureaucracy faster and more accessible."],"link":{"label":"Available soon","url":null},"options":[{"label":"← View other projects","next":"projetos"},{"label":"📍 Contact","next":"contacto"}]},"contacto":{"bubbles":["We are based in **Faro, Portugal** 📍","R. Dom Francisco Gomes 4 1A, 8000-306\n\n📞 +351 967 015 157\n✉️ geral@alemdocodigo.pt","Would you like to send us a message directly?"],"options":[{"label":"✉️ Write a message","next":"falarConnosco"},{"label":"🚀 View projects","next":"projetos"},{"label":"🔄 Restart","next":"start"}]},"falarConnosco":{"bubbles":["Great! I will take you to the contact form now. We always reply within 24 hours. 📬"],"scrollTo":"contacto","options":[{"label":"🔄 Restart","next":"start"}]}};
+const unknownMessage = "I could not find a direct answer for that. 🤔 Try asking about our **projects**, **technology**, **who we are**, or **contact**!";
+
+const flow = heroFlow;
+
+const messagesEl = document.getElementById("heroChatMessages");
+const optionsEl = document.getElementById("heroChatOptions");
+const inputField = document.getElementById("hciField");
+const sendBtn = document.getElementById("hciSend");
+
+function renderMarkdown(text) {
+  return text
+    .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+    .replace(/\n/g, "<br>");
+}
+
+function typewriter(el, html, speed = 18) {
+  return new Promise((resolve) => {
+    const plain = html.replace(/<[^>]+>/g, "");
+    const total = plain.length;
+    let i = 0;
+    const source = el.dataset.source || "";
+    const timer = setInterval(() => {
+      i += 2;
+      if (i >= total) {
+        el.innerHTML = renderMarkdown(source);
+        clearInterval(timer);
+        resolve();
+      } else {
+        const visible = source.slice(0, i + source.length - plain.length);
+        el.innerHTML = renderMarkdown(visible);
+      }
+    }, speed);
+  });
+}
+
+function createBubble() {
+  const wrap = document.createElement("div");
+  wrap.className = "hc-msg hc-msg-bot";
+  wrap.innerHTML = `
+    <div class="hc-avatar">
+      <svg width="14" height="14" fill="none" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" stroke="url(#bm)" stroke-width="2"/>
+        <defs><linearGradient id="bm" x1="0" y1="0" x2="24" y2="24">
+          <stop offset="0%" stop-color="#00d4ff"/>
+          <stop offset="100%" stop-color="#7c3aed"/>
+        </linearGradient></defs>
+      </svg>
+    </div>
+    <div class="hc-bubble"></div>`;
+  messagesEl.appendChild(wrap);
+  messagesEl.scrollTop = messagesEl.scrollHeight;
+  return wrap.querySelector(".hc-bubble");
+}
+
+function showTyping() {
+  const wrap = document.createElement("div");
+  wrap.className = "hc-msg hc-msg-bot";
+  wrap.id = "hcTyping";
+  wrap.innerHTML = `
+    <div class="hc-avatar">
+      <svg width="14" height="14" fill="none" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" stroke="#00d4ff" stroke-width="2"/>
+      </svg>
+    </div>
+    <div class="hc-bubble hc-typing"><span></span><span></span><span></span></div>`;
+  messagesEl.appendChild(wrap);
+  messagesEl.scrollTop = messagesEl.scrollHeight;
+}
+
+function removeTyping() {
+  document.getElementById("hcTyping")?.remove();
+}
+
+function addUserMsg(text) {
+  const wrap = document.createElement("div");
+  wrap.className = "hc-msg hc-msg-user";
+  wrap.innerHTML = `<div class="hc-bubble">${text}</div>`;
+  messagesEl.appendChild(wrap);
+  messagesEl.scrollTop = messagesEl.scrollHeight;
+}
+
+function addLink(linkObj) {
+  if (!linkObj) return;
+  const el = document.createElement("div");
+  el.className = "hc-msg hc-msg-bot hc-link-row";
+  el.innerHTML = linkObj.url
+    ? `<a href="${linkObj.url}" target="_blank" rel="noopener" class="hc-link-btn">${linkObj.label}</a>`
+    : `<span class="hc-link-btn disabled">${linkObj.label}</span>`;
+  messagesEl.appendChild(el);
+  messagesEl.scrollTop = messagesEl.scrollHeight;
+}
+
+function renderOptions(options) {
+  optionsEl.innerHTML = "";
+  options.forEach((opt, i) => {
+    const btn = document.createElement("button");
+    btn.className = "hc-opt";
+    btn.style.animationDelay = `${i * 80}ms`;
+    btn.textContent = opt.label;
+    btn.addEventListener("click", () => handleOption(opt));
+    optionsEl.appendChild(btn);
+  });
+  inputField.classList.add("ready");
+}
+
+function handleOption(opt) {
+  if (busy) return;
+  busy = true;
+  addUserMsg(opt.label);
+  optionsEl.innerHTML = "";
+  inputField.classList.remove("ready");
+  setTimeout(async () => {
+    await goTo(opt.next);
+    busy = false;
+  }, 350);
+}
+
+async function goTo(stateKey) {
+  const state = flow[stateKey];
+
+  for (let i = 0; i < state.bubbles.length; i++) {
+    showTyping();
+    const delay = 600 + state.bubbles[i].replace(/\*\*/g, "").length * 6;
+    await new Promise((r) => setTimeout(r, Math.min(delay, 1600)));
+    removeTyping();
+
+    const bubble = createBubble();
+    bubble.dataset.source = state.bubbles[i];
+    await typewriter(bubble, renderMarkdown(state.bubbles[i]));
+
+    if (i < state.bubbles.length - 1) {
+      await new Promise((r) => setTimeout(r, 280));
+    }
+  }
+
+  if (state.link) {
+    await new Promise((r) => setTimeout(r, 150));
+    addLink(state.link);
+  }
+
+  if (state.scrollTo) {
+    await new Promise((r) => setTimeout(r, 600));
+    document.getElementById(state.scrollTo)?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  await new Promise((r) => setTimeout(r, 250));
+  renderOptions(state.options);
+}
+
+const inputEl = document.getElementById("hciInput");
+
+const routes = [
+  { keys: ["crmcredito", "crm"], next: "crmcredito" },
+  { keys: ["creditocasa", "casa", "home", "house", "imovel", "imóvel", "vivienda", "logement"], next: "creditocasa" },
+  { keys: ["simulasite", "simulador", "simulator", "simulador", "calculadora", "calculator", "simulateur"], next: "simulasite" },
+  { keys: ["pededir", "documento", "documentos", "document", "documents", "documentos"], next: "pededirdoc" },
+  { keys: ["projeto", "projetos", "project", "projects", "proyecto", "proyectos", "projet", "projets", "produto", "produtos", "product", "products"], next: "projetos" },
+  { keys: ["tecnologia", "technology", "tecnología", "technologie", "ia", "ai", "inteligencia", "inteligência", "intelligence", "llm"], next: "tecnologia" },
+  { keys: ["quem", "somos", "who", "about", "quien", "quién", "sommes", "apropos", "à propos", "sobre"], next: "quemSomos" },
+  { keys: ["contacto", "contact", "contacto", "contato", "mail", "email", "e-mail", "telefone", "teléfono", "telefono", "phone", "where", "donde", "ou", "onde", "morada", "adresse", "faro"], next: "contacto" },
+];
+
+function normalize(str) {
+  return str.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+function matchRoute(text) {
+  const n = normalize(text);
+  for (const route of routes) {
+    if (route.keys.some((k) => n.includes(normalize(k)))) return route.next;
+  }
+  return null;
+}
+
+let busy = false;
+
+async function submitText() {
+  if (busy) return;
+  const text = inputEl.value.trim();
+  if (!text) return;
+  inputEl.value = "";
+  optionsEl.innerHTML = "";
+  inputField.classList.remove("ready");
+  addUserMsg(text);
+
+  const next = matchRoute(text);
+  busy = true;
+  if (next) {
+    await new Promise((r) => setTimeout(r, 350));
+    await goTo(next);
+  } else {
+    showTyping();
+    await new Promise((r) => setTimeout(r, 1000));
+    removeTyping();
+    const bubble = createBubble();
+    bubble.dataset.source = unknownMessage;
+    await typewriter(bubble, renderMarkdown(bubble.dataset.source));
+    await new Promise((r) => setTimeout(r, 300));
+    renderOptions(flow.start.options);
+  }
+  busy = false;
+}
+
+inputEl.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") submitText();
+});
+sendBtn.addEventListener("click", submitText);
+inputEl.addEventListener("focus", () => inputField.classList.add("ready"));
+inputEl.addEventListener("blur", () => inputField.classList.remove("ready"));
+
+setTimeout(() => goTo("start"), 500);
+})();</script> <section class="section" id="sobre"> <div class="container"> <div class="about-grid"> <div class="about-content"> <div class="section-tag">About us</div> <h2 class="section-title">Technology With <span class="gradient-text">Purpose</span></h2> <p class="about-text">We are a technology and information company based in Faro, specialized in Artificial Intelligence for the financial and real estate sectors. We are not a software house or consultancy. We build our own products and platforms.</p> <p class="about-text">Our mission is simple: use technology to make access to credit and real estate smarter, more transparent, and more efficient, both for professionals and for people searching for a home or financing.</p> <div class="about-values"> <div class="value-item"> <span class="value-dot"></span> Own products, not third-party services </div><div class="value-item"> <span class="value-dot"></span> AI as a real competitive edge </div><div class="value-item"> <span class="value-dot"></span> Focus on credit, real estate, and finance </div><div class="value-item"> <span class="value-dot"></span> Technology built in Portugal </div> </div> </div> <div class="about-visual"> <div class="code-window"> <div class="code-titlebar"> <span class="dot red"></span> <span class="dot yellow"></span> <span class="dot green"></span> <span class="code-file">alemdocodigo.pt</span> </div> <pre class="code-block"><code><span class="c-keyword">const</span> <span class="c-var">adc</span> = {
+  <span class="c-key">type</span>: <span class="c-str">"Tech Company"</span>,
+  <span class="c-key">location</span>: <span class="c-str">"Faro, Portugal"</span>,
+  <span class="c-key">focus</span>: [
+    <span class="c-str">"Credit Brokerage"</span>,
+    <span class="c-str">"Real Estate"</span>,
+    <span class="c-str">"Financial Services"</span>
+  ],
+  <span class="c-key">technology</span>: <span class="c-str">"Artificial Intelligence"</span>,
+  <span class="c-key">model</span>: <span class="c-str">"Own Products"</span>,
+  <span class="c-key">build</span>: <span class="c-fn">(idea)</span> <span class="c-keyword">=&gt;</span> {
+    <span class="c-keyword">return</span> idea
+      .<span class="c-fn">research</span>()
+      .<span class="c-fn">prototype</span>()
+      .<span class="c-fn">launch</span>()
+      .<span class="c-fn">scale</span>();
+  }
+};
+
+<span class="c-comment">// Beyond code, beyond the obvious.</span><span class="code-cursor"></span></code></pre> </div> </div> </div> </div> </section> <script type="module">(function(){const t=document.querySelector("#sobre .code-block code");if(!t)return;const n=t.querySelector(".code-cursor");if(!n)return;const r=[];t.childNodes.forEach(e=>{e!==n&&(e.nodeType===3&&e.nodeValue?r.push({text:e.nodeValue}):e.nodeType===1&&r.push({cls:e.className,text:e.textContent||""}))}),Array.from(t.childNodes).forEach(e=>{e!==n&&t.removeChild(e)}),t.appendChild(n);let l=!1;function h(){if(l)return;l=!0;let e=0,c=0,o=null;function f(){if(e>=r.length)return;const s=r[e],i=s.text[c];if(c===0){if(s.cls){const a=document.createElement("span");a.className=s.cls,o=a}else o=document.createTextNode("");t.insertBefore(o,n)}o.nodeType===1?o.textContent+=i:o.nodeValue+=i,c++,c>=s.text.length&&(e++,c=0,o=null),setTimeout(f,i===`
+`||i===" "?4:16)}setTimeout(f,300)}const u=new IntersectionObserver(e=>{e[0].isIntersecting&&(h(),u.disconnect())},{threshold:.15}),d=document.querySelector("#sobre .code-window");d&&u.observe(d)})();</script> <section class="section section-alt" id="projetos"> <div class="container"> <div class="section-header"> <div class="section-tag">Our projects</div> <h2 class="section-title">What We <span class="gradient-text">Build</span></h2> <p class="section-sub">Platforms and technology products developed in-house, each one solving a real problem in finance and real estate.</p> </div> <div class="projetos-grid"> <a href="https://www.crmcredito.pt" target="_blank" rel="noopener noreferrer" class="projeto-card cor-cyan"> <div class="projeto-header"> <div class="projeto-area">FinTech · Credit</div> </div> <h3 class="projeto-nome">CRM Crédito</h3> <p class="projeto-desc">CRM platform for credit intermediaries. It centralizes process management, automates workflows, and integrates with banks, replacing spreadsheets with an intelligent system powered by AI dashboards.</p> <div class="projeto-tags"> <span class="tag">CRM</span><span class="tag">Automation</span><span class="tag">AI</span><span class="tag">Mortgage Credit</span> </div> <div class="projeto-link"> Visit <span class="link-arrow">→</span> </div> </a><a href="https://www.creditocasa.pt" target="_blank" rel="noopener noreferrer" class="projeto-card cor-violet projeto-ai"> <div class="projeto-header"> <div class="projeto-area">PropTech · FinTech</div> </div> <h3 class="projeto-nome">CréditoCasa.pt</h3> <p class="projeto-desc">The first Portuguese portal that combines property search and mortgage credit using Artificial Intelligence. Users describe what they need in natural language and AI finds the ideal property and financing.</p> <div class="projeto-tags"> <span class="tag">Real Estate</span><span class="tag">Generative AI</span><span class="tag">Credit</span><span class="tag">Contacts</span> </div> <div class="projeto-link"> Visit <span class="link-arrow">→</span> </div> </a><a href="https://www.simulasite.pt" target="_blank" rel="noopener noreferrer" class="projeto-card cor-green"> <div class="projeto-header"> <div class="projeto-area">SaaS · FinTech</div> </div> <h3 class="projeto-nome">SimulaSite</h3> <p class="projeto-desc">SaaS that allows agencies and credit intermediaries to embed financial simulators on their sites, no coding required. Over 15 calculators available, setup in under 2 minutes.</p> <div class="projeto-tags"> <span class="tag">SaaS</span><span class="tag">Simulators</span><span class="tag">Real Estate</span><span class="tag">Lead Generation</span> </div> <div class="projeto-link"> Visit <span class="link-arrow">→</span> </div> </a><div class="projeto-card cor-cyan projeto-disabled"> <div class="projeto-header"> <div class="projeto-area">LegalTech · Automation</div> </div> <h3 class="projeto-nome">Request Documents</h3> <p class="projeto-desc">Platform that simplifies document requests and management. It automates bureaucracy to make processes faster and easier.</p> <div class="projeto-tags"> <span class="tag">Documents</span><span class="tag">Automation</span><span class="tag">Legal</span> </div> <div class="projeto-link projeto-link-muted"> Coming Soon </div> </div><div class="projeto-card cor-violet" data-open-modal role="button" tabindex="0"> <div class="projeto-header"> <div class="projeto-area">FinTech · BdP Compliance</div> </div> <h3 class="projeto-nome">Sites for Credit Intermediaries</h3> <p class="projeto-desc">Professional websites for credit intermediaries registered with Banco de Portugal: unique identity, mandatory legal content and digital presence from day one.</p> <div class="projeto-tags"> <span class="tag">Banco de Portugal</span><span class="tag">Digital Identity</span><span class="tag">Compliance</span><span class="tag">Intermediaries</span> </div> <div class="projeto-link"> Request a quote <span class="link-arrow">→</span> </div> </div> </div> </div> </section> <div class="sites-modal-overlay" id="sitesModalOverlay"> <div class="sites-modal" role="dialog" aria-modal="true"> <button class="modal-close-x" id="modalCloseX" aria-label="Fechar"> <svg width="16" height="16" fill="none" viewBox="0 0 24 24"> <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path> </svg> </button> <h3 class="modal-title">What&#39;s included</h3> <p class="modal-subtitle">Everything you need to establish a professional and compliant online presence from day one.</p> <ul class="modal-features"> <li> <span class="modal-check">✓</span> <span>Unique professional visual identity</span> </li><li> <span class="modal-check">✓</span> <span>Full compliance with Banco de Portugal regulations</span> </li><li> <span class="modal-check">✓</span> <span>Technical SEO optimized from day one</span> </li><li> <span class="modal-check">✓</span> <span>Blog and news section for organic positioning</span> </li><li> <span class="modal-check">✓</span> <span>Contact form and lead capture</span> </li><li> <span class="modal-check">✓</span> <span>Domain &amp; hosting: purchase through us or we configure yours</span> </li><li> <span class="modal-check">✓</span> <span>SimulaSite integration (financial simulators)</span> </li><li> <span class="modal-check">✓</span> <span>Mobile-first responsive design</span> </li><li> <span class="modal-check">✓</span> <span>100% yours, with full access and no lock-in</span> </li><li> <span class="modal-check">✓</span> <span>Privacy policy and GDPR pre-configured</span> </li><li> <span class="modal-check">✓</span> <span>Content management panel for full autonomy</span> </li><li> <span class="modal-check">✓</span> <span>Google Analytics integrated: visits, leads and traffic in real time</span> </li> </ul> <div class="modal-actions"> <button class="modal-cta-btn" id="modalCta">Request a quote →</button> <button class="modal-cancel-btn" id="modalCloseBtn">Close</button> </div> </div> </div> <script>(function(){const ctaSelectOption = "Sites for Credit Intermediaries";
+
+  const overlay = document.getElementById('sitesModalOverlay');
+
+  function openModal() {
+    overlay?.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    overlay?.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('[data-open-modal]').forEach((btn) => {
+    btn.addEventListener('click', openModal);
+    btn.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(); }
+    });
+  });
+
+  overlay?.addEventListener('click', (e) => {
+    if (e.target === overlay) closeModal();
+  });
+
+  document.getElementById('modalCloseX')?.addEventListener('click', closeModal);
+  document.getElementById('modalCloseBtn')?.addEventListener('click', closeModal);
+
+  document.getElementById('modalCta')?.addEventListener('click', () => {
+    closeModal();
+    setTimeout(() => {
+      const select = document.getElementById('cf-servico');
+      if (select) select.value = ctaSelectOption;
+      document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 200);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+  });
+
+  // AI card: activate animated border when card enters viewport
+  const aiCard = document.querySelector('.projeto-ai');
+  if (aiCard) {
+    const aiObserver = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        aiCard.classList.add('ai-visible');
+        aiObserver.disconnect();
+      }
+    }, { threshold: 0.3 });
+    aiObserver.observe(aiCard);
+  }
+})();</script> <section class="section section-contact" id="contacto"> <div class="container"> <div class="contact-grid"> <div class="contact-panel"> <div class="panel-header"> <div class="panel-dots"> <button class="pd red" id="dotRed" aria-label="WhatsApp"> <span class="pd-tooltip">WhatsApp</span> </button> <button class="pd yellow" id="dotYellow" aria-label="Call"> <span class="pd-tooltip">Call</span> </button> <button class="pd green" id="dotGreen" aria-label="Write message"> <span class="pd-tooltip">Write message</span> </button> </div> <span class="panel-title">connection.init</span> <span class="panel-ping"> <span class="ping-dot"></span> online </span> </div> <div class="panel-body"> <div class="section-tag">Contact</div> <h2 class="section-title">Let&#39;s <span class="gradient-text">Talk</span></h2> <p class="panel-desc">Curious about our products? Talk to us, explore a partnership, or share your feedback.</p> <div class="conn-nodes"> <div class="conn-node"> <div class="node-icon"> <svg width="18" height="18" fill="none" viewBox="0 0 24 24"> <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"></circle> </svg> </div> <div class="node-info"> <span class="node-label">Location</span> <span class="node-value">R. Dom Francisco Gomes 4 1A, Faro</span> </div> <div class="node-status"></div> </div> <div class="conn-line"></div> <div class="conn-node"> <div class="node-icon"> <svg width="18" height="18" fill="none" viewBox="0 0 24 24"> <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.82 19.79 19.79 0 01.12 2.18 2 2 0 012.11 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.46-.46a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </svg> </div> <div class="node-info"> <span class="node-label">Phone / WhatsApp</span> <a href="tel:+351967015157" class="node-value node-link">+351 967 015 157</a> </div> <div class="node-status"></div> </div> </div> <div class="terminal-hint"> <span class="th-prompt">$</span> <span class="th-cmd" id="terminalCmd"></span> <span class="code-cursor"></span> </div> </div> </div> <div class="contact-form-panel"> <form class="contact-form" id="contactForm" action="https://formsubmit.co/ajax/geral@alemdocodigo.pt" method="POST" novalidate> <input type="hidden" name="_subject" value="Novo Lead — Site Além do Código"> <input type="hidden" name="_captcha" value="false"> <input type="hidden" name="_template" value="box"> <input type="hidden" name="_replyto" id="hidden-replyto"> <div class="cf-row"> <div class="cf-group"> <label for="cf-nome">Name</label> <input type="text" id="cf-nome" name="Nome" placeholder="Your name" required> <span class="cf-error" id="err-nome"></span> </div> <div class="cf-group"> <label for="cf-empresa">Company</label> <input type="text" id="cf-empresa" name="Empresa" placeholder="Your company name"> </div> </div> <div class="cf-row"> <div class="cf-group"> <label for="cf-email">Email</label> <input type="email" id="cf-email" name="Email" placeholder="email@company.com" required> <span class="cf-error" id="err-email"></span> </div> <div class="cf-group"> <label for="cf-contacto">Contact</label> <input type="tel" id="cf-contacto" name="Telefone" placeholder="+351 9XX XXX XXX"> </div> </div> <div class="cf-group"> <label for="cf-servico">What brought you here?</label> <div class="cf-select-wrap"> <select id="cf-servico" name="Serviço Pretendido" required> <option value="">Select...</option> <option>CRM Crédito</option><option>CréditoCasa.pt</option><option>SimulaSite</option><option>Request Documents</option><option>Sites for Credit Intermediaries</option><option>Partnership</option><option>Other</option> </select> <svg class="cf-select-arrow" width="14" height="14" fill="none" viewBox="0 0 24 24"> <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </svg> </div> <span class="cf-error" id="err-servico"></span> </div> <div class="cf-group cf-group-grow"> <label for="cf-msg">Message</label> <textarea id="cf-msg" name="Mensagem" placeholder="Do you have questions about our products, or would you like to explore a partnership?" required></textarea> <span class="cf-error" id="err-msg"></span> </div> <button type="submit" class="cf-submit" id="cfSubmit"> <span class="cf-submit-text">Send Message</span> <svg class="cf-submit-icon" width="16" height="16" fill="none" viewBox="0 0 24 24"> <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </svg> </button> </form> </div> </div> </div> </section> <script>(function(){const terminalCommands = ["call +351 967 015 157","explore --projects crmcredito.pt","whatsapp +351967015157"];
+const submitTexts = {"default":"Send Message","sending":"Sending...","success":"Message sent ✓"};
+const validationTexts = {"required":"Required field","email":"Invalid email"};
+
+  document.getElementById("dotRed")?.addEventListener("click", () => {
+    window.open("https://wa.me/351967015157", "_blank");
+  });
+
+  document.getElementById("dotYellow")?.addEventListener("click", () => {
+    window.location.href = "tel:+351967015157";
+  });
+
+  document.getElementById("dotGreen")?.addEventListener("click", () => {
+    const msg = document.getElementById("cf-msg");
+    if (msg) {
+      msg.scrollIntoView({ behavior: "smooth", block: "center" });
+      setTimeout(() => msg.focus(), 400);
+    }
+  });
+
+  let ci = 0;
+  let ci2 = 0;
+  let deleting = false;
+  const terminalEl = document.getElementById("terminalCmd");
+
+  if (terminalEl) {
+    function typeCmd() {
+      const cmd = terminalCommands[ci];
+      if (!deleting) {
+        terminalEl.textContent = cmd.slice(0, ci2 + 1);
+        ci2++;
+        if (ci2 === cmd.length) {
+          deleting = true;
+          setTimeout(typeCmd, 1800);
+          return;
+        }
+      } else {
+        terminalEl.textContent = cmd.slice(0, ci2 - 1);
+        ci2--;
+        if (ci2 === 0) {
+          deleting = false;
+          ci = (ci + 1) % terminalCommands.length;
+        }
+      }
+      setTimeout(typeCmd, deleting ? 32 : 58);
+    }
+
+    setTimeout(typeCmd, 600);
+  }
+
+  function setError(id, msg) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.textContent = msg;
+    el.style.display = msg ? 'block' : 'none';
+    const group = el.closest('.cf-group');
+    if (group) group.classList.toggle('has-error', !!msg);
+  }
+
+  function validateForm() {
+    let valid = true;
+    const nome = document.getElementById('cf-nome');
+    const email = document.getElementById('cf-email');
+    const servico = document.getElementById('cf-servico');
+    const msg = document.getElementById('cf-msg');
+
+    if (!nome.value.trim()) { setError('err-nome', validationTexts.required); valid = false; }
+    else setError('err-nome', '');
+
+    const emailVal = email.value.trim();
+    if (!emailVal) { setError('err-email', validationTexts.required); valid = false; }
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) { setError('err-email', validationTexts.email); valid = false; }
+    else setError('err-email', '');
+
+    if (!servico.value) { setError('err-servico', validationTexts.required); valid = false; }
+    else setError('err-servico', '');
+
+    if (!msg.value.trim()) { setError('err-msg', validationTexts.required); valid = false; }
+    else setError('err-msg', '');
+
+    return valid;
+  }
+
+  const form = document.getElementById("contactForm");
+  const btn = document.getElementById("cfSubmit");
+
+  if (form && btn) {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      if (!validateForm()) return;
+      // Sync reply-to with email field
+      const replyTo = document.getElementById("hidden-replyto");
+      const emailField = document.getElementById("cf-email");
+      if (replyTo && emailField) replyTo.value = emailField.value;
+      const span = btn.querySelector(".cf-submit-text");
+      btn.disabled = true;
+      span.textContent = submitTexts.sending;
+      btn.classList.add("sending");
+
+      try {
+        const res = await fetch(form.action, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify(Object.fromEntries(new FormData(form))),
+        });
+
+        const json = await res.json();
+        if (!res.ok || !json.success) throw new Error();
+
+        span.textContent = submitTexts.success;
+        btn.classList.remove("sending");
+        btn.classList.add("sent");
+        setTimeout(() => {
+          span.textContent = submitTexts.default;
+          btn.disabled = false;
+          btn.classList.remove("sent");
+          form.reset();
+        }, 3000);
+      } catch {
+        span.textContent = submitTexts.default;
+        btn.disabled = false;
+        btn.classList.remove("sending");
+      }
+    });
+  }
+})();</script> <footer class="footer"> <div class="footer-glow"></div> <div class="container"> <div class="footer-inner"> <!-- Brand --> <div class="footer-brand"> <a href="#" class="logo"> <span class="logo-symbol">&lt;</span>além do código<span class="logo-symbol">/&gt;</span> </a> <p class="footer-tagline">Technology &amp; AI Company</p> <p class="footer-location"> <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;margin-right:4px"> <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path> <circle cx="12" cy="10" r="3" stroke-linecap="round"></circle> </svg>
+Faro, Portugal
+</p> </div> <!-- Links --> <div class="footer-links"> <div class="footer-col"> <strong>Projects</strong> <a href="https://www.crmcredito.pt" target="_blank" rel="noopener">CRM Crédito</a> <a href="https://www.creditocasa.pt" target="_blank" rel="noopener">CréditoCasa.pt</a> <a href="https://www.simulasite.pt" target="_blank" rel="noopener">SimulaSite</a> <span class="footer-link-muted">Pedir Documentos</span> </div> <div class="footer-col"> <strong>Company</strong> <a href="#sobre">About us</a> <a href="#projetos">Our projects</a> <a href="#contacto">Contact</a> </div> <div class="footer-col"> <strong>Legal</strong> <a href="/termos">Termos e Condições</a> <a href="/privacidade">Política de Privacidade</a> </div> </div> </div> <!-- Bottom bar --> <div class="footer-bottom"> <p>© 2026 Além do Código. Todos os direitos reservados.</p> </div> </div> </footer> <script type="module" src="/_astro/index.astro_astro_type_script_index_0_lang.DSk14kgh.js"></script>  </body></html>
