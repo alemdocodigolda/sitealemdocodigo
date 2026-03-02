@@ -221,13 +221,15 @@ export const siteContent: Record<Lang, SiteContent> = {
         },
         projetos: {
           bubbles: [
-            "Temos **5 projetos ativos**, todos nas áreas do crédito, imobiliário e serviços financeiros.",
+            "Temos **6 projetos ativos**, todos nas áreas do crédito, imobiliário e serviços financeiros.",
             "Qual queres conhecer?",
           ],
           options: [
             { label: "📋 CRMCredito.pt", next: "crmcredito" },
             { label: "🏠 CréditoCasa.pt", next: "creditocasa" },
             { label: "⚡ SimulaSite.pt", next: "simulasite" },
+            { label: "🧾 LusoInvoice", next: "lusoinvoice" },
+            { label: "📄 Pedir Documentos", next: "pededirdoc" },
             { label: "🌐 Sites para Intermediários", next: "sitesIntermediarios" },
           ],
         },
@@ -275,9 +277,20 @@ export const siteContent: Record<Lang, SiteContent> = {
             { label: "📍 Contacto", next: "contacto" },
           ],
         },
+        lusoinvoice: {
+          bubbles: [
+            "**LusoInvoice** é uma app para Stripe que automatiza a emissão de faturas portuguesas via InvoiceXpress.",
+            "Extração automática de IVA, sincronização por webhooks e criação de faturas diretamente do Stripe Dashboard.",
+          ],
+          link: { label: "Visitar LusoInvoice.pt →", url: "https://lusoinvoice.pt" },
+          options: [
+            { label: "← Ver outros projetos", next: "projetos" },
+            { label: "📍 Contacto", next: "contacto" },
+          ],
+        },
         pededirdoc: {
           bubbles: [
-            "**PedeDirDocumentos.pt** simplifica o pedido e gestão de documentos, tornando processos burocráticos mais rápidos e acessíveis.",
+            "**Pedir Documentos** simplifica o pedido e gestão de documentos, tornando processos burocráticos mais rápidos e acessíveis.",
           ],
           link: { label: "Em breve disponível", url: null },
           options: [
@@ -553,13 +566,15 @@ export const siteContent: Record<Lang, SiteContent> = {
         },
         projetos: {
           bubbles: [
-            "We currently have **5 active projects**, all focused on credit, real estate, and financial services.",
+            "We currently have **6 active projects**, all focused on credit, real estate, and financial services.",
             "Which one do you want to explore?",
           ],
           options: [
             { label: "📋 CRMCredito.pt", next: "crmcredito" },
             { label: "🏠 CréditoCasa.pt", next: "creditocasa" },
             { label: "⚡ SimulaSite.pt", next: "simulasite" },
+            { label: "🧾 LusoInvoice", next: "lusoinvoice" },
+            { label: "📄 Request Documents", next: "pededirdoc" },
             { label: "🌐 Sites for Intermediaries", next: "sitesIntermediarios" },
           ],
         },
@@ -607,9 +622,20 @@ export const siteContent: Record<Lang, SiteContent> = {
             { label: "📍 Contact", next: "contacto" },
           ],
         },
+        lusoinvoice: {
+          bubbles: [
+            "**LusoInvoice** is a Stripe app that automates Portuguese invoice creation via InvoiceXpress.",
+            "Automatic VAT extraction, webhook sync, and invoice creation directly from the Stripe Dashboard.",
+          ],
+          link: { label: "Visit LusoInvoice.pt →", url: "https://lusoinvoice.pt" },
+          options: [
+            { label: "← View other projects", next: "projetos" },
+            { label: "📍 Contact", next: "contacto" },
+          ],
+        },
         pededirdoc: {
           bubbles: [
-            "**PedeDirDocumentos.pt** simplifies requesting and managing documents, making bureaucracy faster and more accessible.",
+            "**Request Documents** simplifies requesting and managing documents, making bureaucracy faster and more accessible.",
           ],
           link: { label: "Available soon", url: null },
           options: [

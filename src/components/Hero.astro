@@ -230,13 +230,16 @@ const inputEl = document.getElementById("hciInput");
 
 const routes = [
   { keys: ["crmcredito", "crm"], next: "crmcredito" },
-  { keys: ["creditocasa", "casa", "home", "house", "imovel", "imóvel", "vivienda", "logement"], next: "creditocasa" },
-  { keys: ["simulasite", "simulador", "simulator", "simulador", "calculadora", "calculator", "simulateur"], next: "simulasite" },
-  { keys: ["pededir", "documento", "documentos", "document", "documents", "documentos"], next: "pededirdoc" },
-  { keys: ["projeto", "projetos", "project", "projects", "proyecto", "proyectos", "projet", "projets", "produto", "produtos", "product", "products"], next: "projetos" },
-  { keys: ["tecnologia", "technology", "tecnología", "technologie", "ia", "ai", "inteligencia", "inteligência", "intelligence", "llm"], next: "tecnologia" },
-  { keys: ["quem", "somos", "who", "about", "quien", "quién", "sommes", "apropos", "à propos", "sobre"], next: "quemSomos" },
-  { keys: ["contacto", "contact", "contacto", "contato", "mail", "email", "e-mail", "telefone", "teléfono", "telefono", "phone", "where", "donde", "ou", "onde", "morada", "adresse", "faro"], next: "contacto" },
+  { keys: ["creditocasa", "casa", "home", "house", "imovel", "imóvel", "vivienda", "logement", "habitacao", "habitação", "mortgage"], next: "creditocasa" },
+  { keys: ["simulasite", "simulador", "simulator", "calculadora", "calculator", "simulateur", "widget", "embed"], next: "simulasite" },
+  { keys: ["lusoinvoice", "luso", "invoice", "fatura", "faturacao", "faturação", "stripe", "invoicexpress"], next: "lusoinvoice" },
+  { keys: ["pededir", "documento", "documentos", "document", "documents", "pedir doc"], next: "pededirdoc" },
+  { keys: ["site intermediario", "sites intermediarios", "intermediario", "intermediários", "banco de portugal", "compliance", "bdp"], next: "sitesIntermediarios" },
+  { keys: ["projeto", "projetos", "project", "projects", "producto", "productos", "produto", "produtos", "product", "products"], next: "projetos" },
+  { keys: ["tecnologia", "technology", "ia", "ai", "inteligencia", "inteligência", "intelligence", "llm", "machine learning"], next: "tecnologia" },
+  { keys: ["quem", "somos", "who", "about", "equipa", "team", "sobre"], next: "quemSomos" },
+  { keys: ["contacto", "contact", "contato", "mail", "email", "telefone", "phone", "onde", "morada", "faro", "whatsapp", "ligar", "mensagem"], next: "contacto" },
+  { keys: ["preco", "preço", "price", "custo", "cost", "orcamento", "orçamento", "quanto custa", "budget"], next: "falarConnosco" },
 ];
 
 function normalize(str) {
