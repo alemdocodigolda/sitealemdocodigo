@@ -161,9 +161,9 @@ interface SiteContent {
 export const siteContent: Record<Lang, SiteContent> = {
   pt: {
     layout: {
-      title: "Além do Código — IA, Automação e Soluções Digitais",
+      title: "Além do Código — Tecnologia para Crédito e Imobiliário",
       description:
-        "Criamos soluções de IA, automação e produtos digitais para empresas que querem crescer.",
+        "Construímos o futuro do crédito e do imobiliário. Produtos digitais próprios com IA para inovar, crescer e evoluir.",
     },
     nav: {
       about: "Sobre",
@@ -506,9 +506,9 @@ export const siteContent: Record<Lang, SiteContent> = {
   },
   en: {
     layout: {
-      title: "Beyond Code — AI, Automation & Digital Solutions",
+      title: "Além do Código — Technology for Credit & Real Estate",
       description:
-        "We build AI, automation, and digital products for companies that want to scale.",
+        "Building the future of credit and real estate. Our own AI-powered digital products to innovate, grow and evolve.",
     },
     nav: {
       about: "About",
