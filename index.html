@@ -1,496 +1,397 @@
-<!DOCTYPE html>
-<html lang="pt-PT">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Além do Código — IA, Automação e Soluções Digitais</title>
-  <meta name="description" content="Criamos soluções de IA, automação e produtos digitais para empresas que querem crescer." />
-  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
-  <link rel="canonical" href="https://alemdocodigo.pt/" />
-  <link rel="alternate" hreflang="pt-PT" href="https://alemdocodigo.pt/" />
-  <link rel="alternate" hreflang="en" href="https://alemdocodigo.pt/en/" />
-  <link rel="alternate" hreflang="x-default" href="https://alemdocodigo.pt/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Além do Código" />
-  <meta property="og:locale" content="pt_PT" />
-  <meta property="og:title" content="Além do Código — IA, Automação e Soluções Digitais" />
-  <meta property="og:description" content="Criamos soluções de IA, automação e produtos digitais para empresas que querem crescer." />
-  <meta property="og:url" content="https://alemdocodigo.pt/" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Além do Código — IA, Automação e Soluções Digitais" />
-  <meta name="twitter:description" content="Criamos soluções de IA, automação e produtos digitais para empresas que querem crescer." />
-  <meta name="theme-color" content="#061225" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Além do Código",
-      "url": "https://alemdocodigo.pt/",
-      "inLanguage": "pt-PT",
-      "description": "Soluções de IA, automação e produtos digitais para empresas em Portugal.",
-      "email": "geral@alemdocodigo.pt",
-      "telephone": "+351967015157",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "R. Dom Francisco Gomes 4 1A",
-        "postalCode": "8000-306",
-        "addressLocality": "Faro",
-        "addressCountry": "PT"
-      },
-      "areaServed": "PT"
+<!DOCTYPE html><html lang="pt-PT"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Além do Código — IA, Automação e Soluções Digitais</title><meta name="description" content="Criamos soluções de IA, automação e produtos digitais para empresas que querem crescer."><meta name="robots" content="index, follow"><link rel="canonical" href="https://alemdocodigo.pt/"><link rel="alternate" hreflang="pt-PT" href="https://alemdocodigo.pt/"><link rel="alternate" hreflang="en" href="https://alemdocodigo.pt/en/"><meta property="og:title" content="Além do Código — IA, Automação e Soluções Digitais"><meta property="og:description" content="Criamos soluções de IA, automação e produtos digitais para empresas que querem crescer."><meta property="og:type" content="website"><meta property="og:url" content="https://alemdocodigo.pt/"><meta property="og:locale" content="pt_PT"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/index.BR0WJG1o.css"></head> <body>  <nav class="nav" id="nav"> <div class="nav-inner"> <a href="#" class="logo"> <span class="logo-symbol">&lt;</span>além do código<span class="logo-symbol">/&gt;</span> </a> <div class="nav-right"> <ul class="nav-links"> <li><a href="#sobre">Sobre</a></li> <li><a href="#projetos">Projetos</a></li> <li><a href="#contacto" class="btn-nav">Contacto</a></li> </ul> <div class="lang-switcher" aria-label="Selecionar idioma"> <a href="/" class="lang-link active" aria-label="Português" aria-current="page" title="Português"> <span class="lang-code" aria-hidden="true">PT</span> <span class="sr-only">Português</span> </a><a href="/en/" class="lang-link " aria-label="English" title="English"> <span class="lang-code" aria-hidden="true">EN</span> <span class="sr-only">English</span> </a> </div> </div> <button class="nav-toggle" id="navToggle" aria-label="Menu"> <span></span><span></span><span></span> </button> </div> <div class="nav-mobile" id="navMobile"> <a href="#sobre">Sobre</a> <a href="#projetos">Projetos</a> <a href="#contacto">Contacto</a> <div class="nav-mobile-langs" aria-label="Selecionar idioma"> <a href="/" class="lang-link active" aria-label="Português" aria-current="page" title="Português"> <span class="lang-code" aria-hidden="true">PT</span> <span class="sr-only">Português</span> </a><a href="/en/" class="lang-link " aria-label="English" title="English"> <span class="lang-code" aria-hidden="true">EN</span> <span class="sr-only">English</span> </a> </div> </div> </nav> <section class="hero" id="hero"> <canvas id="particleCanvas"></canvas> <div class="hero-top"> <h1 class="hero-tagline"> Construímos O <span class="gradient-text">Futuro</span><br>Do Crédito E Do Imobiliário </h1> </div> <div class="hero-chat-wrap"> <div class="hero-chat" id="heroChat"> <div class="hero-chat-header"> <div class="hero-chat-avatar"> <svg width="18" height="18" fill="none" viewBox="0 0 24 24"> <circle cx="12" cy="12" r="10" stroke="url(#hcg)" stroke-width="2"></circle> <circle cx="9" cy="10" r="1.5" fill="#00d4ff"></circle> <circle cx="15" cy="10" r="1.5" fill="#7c3aed"></circle> <path d="M9 15s1 1.5 3 1.5 3-1.5 3-1.5" stroke="#10b981" stroke-width="1.5" stroke-linecap="round"></path> <defs> <linearGradient id="hcg" x1="0" y1="0" x2="24" y2="24"> <stop offset="0%" stop-color="#00d4ff"></stop> <stop offset="100%" stop-color="#7c3aed"></stop> </linearGradient> </defs> </svg> </div> <div> <div class="hero-chat-name">Assistente ADC</div> <div class="hero-chat-status"><span class="status-dot"></span>Online agora</div> </div> <div class="hero-chat-pills"> <span class="pill">FinTech</span><span class="pill">PropTech</span><span class="pill">IA</span> </div> </div> <div id="heroChatMessages" class="hero-chat-messages"></div> <div id="heroChatOptions" class="hero-chat-options"></div> <div class="hero-chat-input" id="heroChatInput"> <div class="hci-field" id="hciField"> <svg class="hci-icon" width="16" height="16" fill="none" viewBox="0 0 24 24"> <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </svg> <input type="text" id="hciInput" class="hci-real-input" placeholder="Escreve a tua pergunta…" autocomplete="off" spellcheck="false"> </div> <button class="hci-send" id="hciSend" aria-label="Enviar"> <svg width="16" height="16" fill="none" viewBox="0 0 24 24"> <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </svg> </button> </div> </div> </div> <div class="hero-scroll-hint"> <span>Explora o site</span> <svg width="16" height="16" fill="none" viewBox="0 0 24 24"> <path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </svg> </div> </section> <script>(function(){const heroFlow = {"start":{"bubbles":["Olá! 👋 Bem-vindo à **Além do Código**.","Somos uma empresa de tecnologia especializada em **Inteligência Artificial**. Construímos os nossos próprios produtos nas áreas do crédito e imobiliário.","Por onde queres começar?"],"options":[{"label":"👥 Quem são?","next":"quemSomos"},{"label":"🚀 Os nossos projetos","next":"projetos"},{"label":"📍 Localização & contacto","next":"contacto"}]},"quemSomos":{"bubbles":["Somos uma empresa de tecnologia e informação baseada em **Faro, Portugal**.","Não somos uma consultora nem uma software house. Construímos os nossos **próprios produtos** nas áreas do crédito, imobiliário e serviços financeiros.","A IA é a nossa vantagem competitiva real."],"options":[{"label":"🚀 Ver os projetos","next":"projetos"},{"label":"💡 Que tecnologia usam?","next":"tecnologia"},{"label":"📍 Onde estão?","next":"contacto"}]},"tecnologia":{"bubbles":["Usamos **Inteligência Artificial** de forma prática: modelos de linguagem (LLMs), automação de processos, pesquisa semântica e análise de dados.","Tudo construído internamente, integrado nos nossos próprios produtos. Sem jargão vazio, com resultados."],"options":[{"label":"🚀 Ver os projetos","next":"projetos"},{"label":"🔄 Voltar ao início","next":"start"}]},"projetos":{"bubbles":["Temos **5 projetos ativos**, todos nas áreas do crédito, imobiliário e serviços financeiros.","Qual queres conhecer?"],"options":[{"label":"📋 CRMCredito.pt","next":"crmcredito"},{"label":"🏠 CréditoCasa.pt","next":"creditocasa"},{"label":"⚡ SimulaSite.pt","next":"simulasite"},{"label":"🌐 Sites para Intermediários","next":"sitesIntermediarios"}]},"sitesIntermediarios":{"bubbles":["Criamos **sites profissionais** para intermediários de crédito registados no Banco de Portugal.","Identidade visual única, conteúdo legal obrigatório pré-configurado e posicionamento digital desde o primeiro dia. Tudo o que o Banco de Portugal exige, com o design que o teu negócio merece."],"link":{"label":"Saber mais & pedir orçamento →","url":"https://alemdocodigo.pt/#contacto"},"options":[{"label":"← Ver outros projetos","next":"projetos"},{"label":"✉️ Falar connosco","next":"falarConnosco"}]},"crmcredito":{"bubbles":["**CRMCredito.pt** é uma plataforma CRM especializada para intermediários de crédito.","Centraliza processos, automatiza fluxos de trabalho, integra com bancos e tem painéis de IA para análise de desempenho."],"link":{"label":"Visitar CRMCredito.pt →","url":"https://www.crmcredito.pt"},"options":[{"label":"← Ver outros projetos","next":"projetos"},{"label":"📍 Contacto","next":"contacto"}]},"creditocasa":{"bubbles":["**CréditoCasa.pt** é o primeiro portal em Portugal que combina pesquisa imobiliária com crédito habitação, usando IA.","O utilizador descreve o que procura em linguagem natural e a IA encontra o imóvel e o financiamento ideal."],"link":{"label":"Visitar CréditoCasa.pt →","url":"https://www.creditocasa.pt"},"options":[{"label":"← Ver outros projetos","next":"projetos"},{"label":"📍 Contacto","next":"contacto"}]},"simulasite":{"bubbles":["**SimulaSite.pt** é um SaaS que permite incorporar simuladores financeiros em qualquer site, sem programação.","Mais de 15 calculadoras disponíveis. Instalação em menos de 2 minutos."],"link":{"label":"Visitar SimulaSite.pt →","url":"https://www.simulasite.pt"},"options":[{"label":"← Ver outros projetos","next":"projetos"},{"label":"📍 Contacto","next":"contacto"}]},"pededirdoc":{"bubbles":["**PedeDirDocumentos.pt** simplifica o pedido e gestão de documentos, tornando processos burocráticos mais rápidos e acessíveis."],"link":{"label":"Em breve disponível","url":null},"options":[{"label":"← Ver outros projetos","next":"projetos"},{"label":"📍 Contacto","next":"contacto"}]},"contacto":{"bubbles":["Estamos em **Faro, Portugal** 📍","R. Dom Francisco Gomes 4 1A, 8000-306\n\n📞 +351 967 015 157\n✉️ geral@alemdocodigo.pt","Preferes enviar uma mensagem diretamente?"],"options":[{"label":"✉️ Escrever mensagem","next":"falarConnosco"},{"label":"🚀 Ver projetos","next":"projetos"},{"label":"🔄 Recomeçar","next":"start"}]},"falarConnosco":{"bubbles":["Ótimo! Já te levo ao formulário de contacto. Respondemos sempre em menos de 24 horas. 📬"],"scrollTo":"contacto","options":[{"label":"🔄 Recomeçar","next":"start"}]}};
+const unknownMessage = "Não encontrei uma resposta direta para isso. 🤔 Tenta perguntar sobre os nossos **projetos**, **tecnologia**, **quem somos** ou **contacto**!";
+
+const flow = heroFlow;
+
+const messagesEl = document.getElementById("heroChatMessages");
+const optionsEl = document.getElementById("heroChatOptions");
+const inputField = document.getElementById("hciField");
+const sendBtn = document.getElementById("hciSend");
+
+function renderMarkdown(text) {
+  return text
+    .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+    .replace(/\n/g, "<br>");
+}
+
+function typewriter(el, html, speed = 18) {
+  return new Promise((resolve) => {
+    const plain = html.replace(/<[^>]+>/g, "");
+    const total = plain.length;
+    let i = 0;
+    const source = el.dataset.source || "";
+    const timer = setInterval(() => {
+      i += 2;
+      if (i >= total) {
+        el.innerHTML = renderMarkdown(source);
+        clearInterval(timer);
+        resolve();
+      } else {
+        const visible = source.slice(0, i + source.length - plain.length);
+        el.innerHTML = renderMarkdown(visible);
+      }
+    }, speed);
+  });
+}
+
+function createBubble() {
+  const wrap = document.createElement("div");
+  wrap.className = "hc-msg hc-msg-bot";
+  wrap.innerHTML = `
+    <div class="hc-avatar">
+      <svg width="14" height="14" fill="none" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" stroke="url(#bm)" stroke-width="2"/>
+        <defs><linearGradient id="bm" x1="0" y1="0" x2="24" y2="24">
+          <stop offset="0%" stop-color="#00d4ff"/>
+          <stop offset="100%" stop-color="#7c3aed"/>
+        </linearGradient></defs>
+      </svg>
+    </div>
+    <div class="hc-bubble"></div>`;
+  messagesEl.appendChild(wrap);
+  messagesEl.scrollTop = messagesEl.scrollHeight;
+  return wrap.querySelector(".hc-bubble");
+}
+
+function showTyping() {
+  const wrap = document.createElement("div");
+  wrap.className = "hc-msg hc-msg-bot";
+  wrap.id = "hcTyping";
+  wrap.innerHTML = `
+    <div class="hc-avatar">
+      <svg width="14" height="14" fill="none" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" stroke="#00d4ff" stroke-width="2"/>
+      </svg>
+    </div>
+    <div class="hc-bubble hc-typing"><span></span><span></span><span></span></div>`;
+  messagesEl.appendChild(wrap);
+  messagesEl.scrollTop = messagesEl.scrollHeight;
+}
+
+function removeTyping() {
+  document.getElementById("hcTyping")?.remove();
+}
+
+function addUserMsg(text) {
+  const wrap = document.createElement("div");
+  wrap.className = "hc-msg hc-msg-user";
+  wrap.innerHTML = `<div class="hc-bubble">${text}</div>`;
+  messagesEl.appendChild(wrap);
+  messagesEl.scrollTop = messagesEl.scrollHeight;
+}
+
+function addLink(linkObj) {
+  if (!linkObj) return;
+  const el = document.createElement("div");
+  el.className = "hc-msg hc-msg-bot hc-link-row";
+  el.innerHTML = linkObj.url
+    ? `<a href="${linkObj.url}" target="_blank" rel="noopener" class="hc-link-btn">${linkObj.label}</a>`
+    : `<span class="hc-link-btn disabled">${linkObj.label}</span>`;
+  messagesEl.appendChild(el);
+  messagesEl.scrollTop = messagesEl.scrollHeight;
+}
+
+function renderOptions(options) {
+  optionsEl.innerHTML = "";
+  options.forEach((opt, i) => {
+    const btn = document.createElement("button");
+    btn.className = "hc-opt";
+    btn.style.animationDelay = `${i * 80}ms`;
+    btn.textContent = opt.label;
+    btn.addEventListener("click", () => handleOption(opt));
+    optionsEl.appendChild(btn);
+  });
+  inputField.classList.add("ready");
+}
+
+function handleOption(opt) {
+  if (busy) return;
+  busy = true;
+  addUserMsg(opt.label);
+  optionsEl.innerHTML = "";
+  inputField.classList.remove("ready");
+  setTimeout(async () => {
+    await goTo(opt.next);
+    busy = false;
+  }, 350);
+}
+
+async function goTo(stateKey) {
+  const state = flow[stateKey];
+
+  for (let i = 0; i < state.bubbles.length; i++) {
+    showTyping();
+    const delay = 600 + state.bubbles[i].replace(/\*\*/g, "").length * 6;
+    await new Promise((r) => setTimeout(r, Math.min(delay, 1600)));
+    removeTyping();
+
+    const bubble = createBubble();
+    bubble.dataset.source = state.bubbles[i];
+    await typewriter(bubble, renderMarkdown(state.bubbles[i]));
+
+    if (i < state.bubbles.length - 1) {
+      await new Promise((r) => setTimeout(r, 280));
     }
-  </script>
-</head>
-<body>
-  <a href="#conteudo-principal" class="skip-link">Saltar para o conteúdo principal</a>
+  }
 
-  <!-- NAV -->
-  <nav class="nav" id="nav">
-    <div class="nav-inner">
-      <a href="/" class="logo">
-        <span class="logo-symbol">&lt;</span>além do código<span class="logo-symbol">/&gt;</span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#processo">Como Trabalhamos</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#contacto" class="btn-nav">Falar Connosco</a></li>
-      </ul>
-      <div class="lang-switcher" aria-label="Seleção de idioma">
-        <a class="lang-link is-active" href="/" lang="pt-PT" aria-current="page">PT</a>
-        <a class="lang-link" href="/en/" lang="en">EN</a>
-      </div>
-      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-controls="navMobile" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <div class="nav-mobile" id="navMobile" hidden>
-      <a href="#servicos">Serviços</a>
-      <a href="#processo">Como Trabalhamos</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#contacto">Falar Connosco</a>
-      <div class="lang-switcher lang-switcher-mobile" aria-label="Seleção de idioma">
-        <a class="lang-link is-active" href="/" lang="pt-PT" aria-current="page">PT</a>
-        <a class="lang-link" href="/en/" lang="en">EN</a>
-      </div>
-    </div>
-  </nav>
+  if (state.link) {
+    await new Promise((r) => setTimeout(r, 150));
+    addLink(state.link);
+  }
 
-  <main id="conteudo-principal">
-  <!-- HERO -->
-  <section class="hero" id="hero">
-    <canvas id="particleCanvas"></canvas>
-    <div class="hero-content">
-      <h1 class="hero-title">
-        IA prática para<br />
-        <span class="gradient-text">PMEs em Portugal</span><br />
-        que querem crescer<br />
-        com eficiência
-      </h1>
-      <p class="hero-subtitle">
-        Ajudamos pequenas e médias empresas a reduzir tarefas manuais, ganhar
-        produtividade e decidir melhor com IA aplicada ao dia a dia.
-      </p>
-      <div class="hero-actions">
-        <a href="#contacto" class="btn-primary">Marcar diagnóstico gratuito</a>
-        <a href="#servicos" class="btn-ghost">Ver Serviços</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-number" data-target="50">0</span><span class="stat-plus">+</span>
-          <span class="stat-label">Projetos de IA e automação entregues</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-number" data-target="30">0</span><span class="stat-plus">+</span>
-          <span class="stat-label">PMEs acompanhadas em Portugal</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-number" data-target="5">0</span><span class="stat-plus">+</span>
-          <span class="stat-label">Anos de experiência em produto e engenharia</span>
-        </div>
-      </div>
-      <p class="hero-metrics-note">
-        Valores acumulados entre 2021 e 2026, em projetos de consultoria e implementação tecnológica.
-      </p>
-    </div>
-    <div class="hero-visual">
-      <div class="ai-orb">
-        <div class="orb-ring orb-ring-1"></div>
-        <div class="orb-ring orb-ring-2"></div>
-        <div class="orb-ring orb-ring-3"></div>
-        <div class="orb-core">
-          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="40" cy="40" r="20" stroke="url(#g1)" stroke-width="2"/>
-            <circle cx="40" cy="20" r="4" fill="#00d4ff"/>
-            <circle cx="60" cy="50" r="4" fill="#7c3aed"/>
-            <circle cx="20" cy="55" r="4" fill="#10b981"/>
-            <circle cx="40" cy="40" r="3" fill="white"/>
-            <line x1="40" y1="20" x2="40" y2="37" stroke="#00d4ff" stroke-width="1.5"/>
-            <line x1="60" y1="50" x2="43" y2="42" stroke="#7c3aed" stroke-width="1.5"/>
-            <line x1="20" y1="55" x2="37" y2="43" stroke="#10b981" stroke-width="1.5"/>
-            <defs>
-              <linearGradient id="g1" x1="0" y1="0" x2="80" y2="80">
-                <stop offset="0%" stop-color="#00d4ff"/>
-                <stop offset="100%" stop-color="#7c3aed"/>
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
-      </div>
-    </div>
-  </section>
+  if (state.scrollTo) {
+    await new Promise((r) => setTimeout(r, 600));
+    document.getElementById(state.scrollTo)?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 
-  <!-- TRUSTED BY (logos placeholder) -->
-  <div class="trusted">
-    <p class="trusted-label">Empresas que confiam em nós</p>
-    <div class="trusted-logos">
-      <span class="trusted-logo">Recomenda.pt</span>
-      <span class="trusted-logo">DireitoLegal.pt</span>
-      <span class="trusted-logo">LusoInvoice</span>
-      <span class="trusted-logo">Parceiro 4</span>
-      <span class="trusted-logo">Parceiro 5</span>
-    </div>
-  </div>
+  await new Promise((r) => setTimeout(r, 250));
+  renderOptions(state.options);
+}
 
-  <!-- SERVIÇOS -->
-  <section class="section" id="servicos">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-tag">O que fazemos</div>
-        <h2 class="section-title">Serviços pensados<br /><span class="gradient-text">para o futuro</span></h2>
-        <p class="section-sub">Da estratégia à implementação — cobrimos todo o ciclo tecnológico da sua empresa.</p>
-      </div>
+const inputEl = document.getElementById("hciInput");
 
-      <div class="services-grid">
+const routes = [
+  { keys: ["crmcredito", "crm"], next: "crmcredito" },
+  { keys: ["creditocasa", "casa", "home", "house", "imovel", "imóvel", "vivienda", "logement"], next: "creditocasa" },
+  { keys: ["simulasite", "simulador", "simulator", "simulador", "calculadora", "calculator", "simulateur"], next: "simulasite" },
+  { keys: ["pededir", "documento", "documentos", "document", "documents", "documentos"], next: "pededirdoc" },
+  { keys: ["projeto", "projetos", "project", "projects", "proyecto", "proyectos", "projet", "projets", "produto", "produtos", "product", "products"], next: "projetos" },
+  { keys: ["tecnologia", "technology", "tecnología", "technologie", "ia", "ai", "inteligencia", "inteligência", "intelligence", "llm"], next: "tecnologia" },
+  { keys: ["quem", "somos", "who", "about", "quien", "quién", "sommes", "apropos", "à propos", "sobre"], next: "quemSomos" },
+  { keys: ["contacto", "contact", "contacto", "contato", "mail", "email", "e-mail", "telefone", "teléfono", "telefono", "phone", "where", "donde", "ou", "onde", "morada", "adresse", "faro"], next: "contacto" },
+];
 
-        <div class="service-card featured">
-          <div class="service-icon-wrap">
-            <svg width="28" height="28" fill="none" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <h3>Consultoria em IA</h3>
-          <p>Identificamos oportunidades reais de IA no seu negócio. Avaliamos, planeamos e acompanhamos a adoção de inteligência artificial com resultados mensuráveis.</p>
-          <ul class="service-list">
-            <li>Diagnóstico de maturidade digital</li>
-            <li>Plano de implementação de IA</li>
-            <li>Seleção de ferramentas e modelos</li>
-            <li>Acompanhamento contínuo</li>
-          </ul>
-          <a href="#contacto" class="service-link">Saber mais →</a>
-        </div>
+function normalize(str) {
+  return str.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
 
-        <div class="service-card">
-          <div class="service-icon-wrap">
-            <svg width="28" height="28" fill="none" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <h3>Automação de Processos</h3>
-          <p>Eliminamos tarefas repetitivas com automação inteligente. Poupamos tempo, reduzimos erros e libertamos a sua equipa para o que realmente importa.</p>
-          <ul class="service-list">
-            <li>Automação com IA generativa</li>
-            <li>Integração de sistemas</li>
-            <li>Fluxos de trabalho inteligentes</li>
-          </ul>
-          <a href="#contacto" class="service-link">Saber mais →</a>
-        </div>
+function matchRoute(text) {
+  const n = normalize(text);
+  for (const route of routes) {
+    if (route.keys.some((k) => n.includes(normalize(k)))) return route.next;
+  }
+  return null;
+}
 
-        <div class="service-card">
-          <div class="service-icon-wrap">
-            <svg width="28" height="28" fill="none" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M3 9h18M9 21V9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          </div>
-          <h3>Desenvolvimento de Software</h3>
-            <p>Criamos aplicações web, plataformas e APIs robustas com tecnologia moderna. Da versão inicial ao produto escalável.</p>
-          <ul class="service-list">
-            <li>Aplicações web &amp; mobile</li>
-            <li>APIs e integrações</li>
-            <li>Plataformas SaaS</li>
-          </ul>
-          <a href="#contacto" class="service-link">Saber mais →</a>
-        </div>
+let busy = false;
 
-        <div class="service-card">
-          <div class="service-icon-wrap">
-            <svg width="28" height="28" fill="none" viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <h3>Dados &amp; Informação</h3>
-          <p>Transformamos dados brutos em decisões estratégicas. Painéis de controlo, relatórios automatizados e análise preditiva para o seu negócio.</p>
-          <ul class="service-list">
-            <li>Inteligência de negócio</li>
-            <li>Análise preditiva</li>
-            <li>Relatórios automatizados</li>
-          </ul>
-          <a href="#contacto" class="service-link">Saber mais →</a>
-        </div>
+async function submitText() {
+  if (busy) return;
+  const text = inputEl.value.trim();
+  if (!text) return;
+  inputEl.value = "";
+  optionsEl.innerHTML = "";
+  inputField.classList.remove("ready");
+  addUserMsg(text);
 
-        <div class="service-card">
-          <div class="service-icon-wrap">
-            <svg width="28" height="28" fill="none" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <h3>Formação &amp; Capacitação</h3>
-          <p>Preparamos as suas equipas para trabalhar com IA. Workshops práticos, tutoriais e acompanhamento para adoção tecnológica real.</p>
-          <ul class="service-list">
-            <li>Workshops de IA para equipas</li>
-            <li>Criação de prompts e ferramentas de IA</li>
-            <li>Adoção digital progressiva</li>
-          </ul>
-          <a href="#contacto" class="service-link">Saber mais →</a>
-        </div>
+  const next = matchRoute(text);
+  busy = true;
+  if (next) {
+    await new Promise((r) => setTimeout(r, 350));
+    await goTo(next);
+  } else {
+    showTyping();
+    await new Promise((r) => setTimeout(r, 1000));
+    removeTyping();
+    const bubble = createBubble();
+    bubble.dataset.source = unknownMessage;
+    await typewriter(bubble, renderMarkdown(bubble.dataset.source));
+    await new Promise((r) => setTimeout(r, 300));
+    renderOptions(flow.start.options);
+  }
+  busy = false;
+}
 
-        <div class="service-card service-cta-card">
-          <div class="cta-card-inner">
-            <div class="cta-orb"></div>
-            <h3>Não sabe por onde começar?</h3>
-            <p>Fazemos uma sessão gratuita de 30 minutos para perceber onde a IA pode gerar mais valor no seu negócio.</p>
-            <a href="#contacto" class="btn-primary btn-sm">Sessão Gratuita</a>
-          </div>
-        </div>
+inputEl.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") submitText();
+});
+sendBtn.addEventListener("click", submitText);
+inputEl.addEventListener("focus", () => inputField.classList.add("ready"));
+inputEl.addEventListener("blur", () => inputField.classList.remove("ready"));
 
-      </div>
-    </div>
-  </section>
-
-  <!-- PROCESSO -->
-  <section class="section section-alt" id="processo">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-tag">Metodologia</div>
-        <h2 class="section-title">Como <span class="gradient-text">trabalhamos</span></h2>
-        <p class="section-sub">Um processo claro, sem jargão e focado em resultados reais.</p>
-      </div>
-      <div class="process-steps">
-        <div class="process-step">
-          <div class="step-number">01</div>
-          <div class="step-content">
-            <h4>Diagnóstico</h4>
-            <p>Analisamos o seu negócio, processos e objetivos. Identificamos onde a tecnologia pode gerar mais impacto.</p>
-          </div>
-        </div>
-        <div class="process-connector"></div>
-        <div class="process-step">
-          <div class="step-number">02</div>
-          <div class="step-content">
-            <h4>Estratégia</h4>
-            <p>Desenhamos um plano concreto com fases, prioridades e ROI esperado. Sem promessas vazias.</p>
-          </div>
-        </div>
-        <div class="process-connector"></div>
-        <div class="process-step">
-          <div class="step-number">03</div>
-          <div class="step-content">
-            <h4>Implementação</h4>
-            <p>Executamos com agilidade. Testamos, iteramos e entregamos soluções que funcionam no mundo real.</p>
-          </div>
-        </div>
-        <div class="process-connector"></div>
-        <div class="process-step">
-          <div class="step-number">04</div>
-          <div class="step-content">
-            <h4>Acompanhamento</h4>
-            <p>Não desaparecemos após a entrega. Monitorizamos, otimizamos e evoluímos a solução consigo.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SOBRE -->
-  <section class="section" id="sobre">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-content">
-          <div class="section-tag">Sobre nós</div>
-          <h2 class="section-title">Tecnologia com <span class="gradient-text">propósito</span></h2>
-          <p class="about-text">
-            Somos uma equipa de consultores e engenheiros baseados em Faro, apaixonados por transformar negócios com tecnologia inteligente. Acreditamos que a IA não é para grandes corporações — é para qualquer empresa que queira ser mais eficiente, mais rápida e mais inteligente.
-          </p>
-          <p class="about-text">
-            Trabalhamos com startups, PMEs e empresas estabelecidas — sempre com o mesmo compromisso: soluções práticas, entregues com transparência e orientadas a resultados reais.
-          </p>
-          <div class="about-values">
-            <div class="value-item">
-              <span class="value-dot"></span>
-              Clareza acima de jargão
-            </div>
-            <div class="value-item">
-              <span class="value-dot"></span>
-              Resultados mensuráveis
-            </div>
-            <div class="value-item">
-              <span class="value-dot"></span>
-              Parceria de longo prazo
-            </div>
-            <div class="value-item">
-              <span class="value-dot"></span>
-              Tecnologia certa para o problema certo
-            </div>
-          </div>
-        </div>
-        <div class="about-visual">
-          <div class="code-window">
-            <div class="code-titlebar">
-              <span class="dot red"></span>
-              <span class="dot yellow"></span>
-              <span class="dot green"></span>
-              <span class="code-file">consultoria.ai</span>
-            </div>
-            <pre class="code-block"><code><span class="c-keyword">const</span> <span class="c-var">adc</span> = {
-  <span class="c-key">missão</span>: <span class="c-str">"Democratizar a IA"</span>,
+setTimeout(() => goTo("start"), 500);
+})();</script> <section class="section" id="sobre"> <div class="container"> <div class="about-grid"> <div class="about-content"> <div class="section-tag">Sobre nós</div> <h2 class="section-title">Tecnologia Com <span class="gradient-text">Propósito</span></h2> <p class="about-text">Somos uma empresa de tecnologia e informação baseada em Faro, especializada em Inteligência Artificial aplicada ao setor financeiro e imobiliário. Não somos uma software house nem uma consultora. Construímos os nossos próprios produtos e plataformas.</p> <p class="about-text">A nossa missão é simples: usar a tecnologia para tornar o acesso ao crédito e ao imobiliário mais inteligente, mais transparente e mais eficiente, tanto para profissionais do setor como para quem procura casa ou financiamento.</p> <div class="about-values"> <div class="value-item"> <span class="value-dot"></span> Produtos próprios, não serviços a terceiros </div><div class="value-item"> <span class="value-dot"></span> IA como vantagem competitiva real </div><div class="value-item"> <span class="value-dot"></span> Foco em crédito, imobiliário e finanças </div><div class="value-item"> <span class="value-dot"></span> Tecnologia construída em Portugal </div> </div> </div> <div class="about-visual"> <div class="code-window"> <div class="code-titlebar"> <span class="dot red"></span> <span class="dot yellow"></span> <span class="dot green"></span> <span class="code-file">alemdocodigo.pt</span> </div> <pre class="code-block"><code><span class="c-keyword">const</span> <span class="c-var">adc</span> = {
+  <span class="c-key">tipo</span>: <span class="c-str">"Empresa Tecnológica"</span>,
   <span class="c-key">localização</span>: <span class="c-str">"Faro, Portugal"</span>,
-  <span class="c-key">especialidades</span>: [
-    <span class="c-str">"Consultoria IA"</span>,
-    <span class="c-str">"Automação"</span>,
-    <span class="c-str">"Dados &amp; Analytics"</span>,
-    <span class="c-str">"Desenvolvimento"</span>
+  <span class="c-key">foco</span>: [
+    <span class="c-str">"Intermediação de Crédito"</span>,
+    <span class="c-str">"Imobiliário"</span>,
+    <span class="c-str">"Serviços Financeiros"</span>
   ],
-  <span class="c-key">transformar</span>: <span class="c-fn">(negócio)</span> <span class="c-keyword">=&gt;</span> {
-    <span class="c-keyword">return</span> negócio
-      .<span class="c-fn">analisar</span>()
-      .<span class="c-fn">estratégia</span>()
-      .<span class="c-fn">implementar</span>()
+  <span class="c-key">tecnologia</span>: <span class="c-str">"Inteligência Artificial"</span>,
+  <span class="c-key">modelo</span>: <span class="c-str">"Produtos Próprios"</span>,
+  <span class="c-key">construir</span>: <span class="c-fn">(ideia)</span> <span class="c-keyword">=&gt;</span> {
+    <span class="c-keyword">return</span> ideia
+      .<span class="c-fn">investigar</span>()
+      .<span class="c-fn">prototipar</span>()
+      .<span class="c-fn">lançar</span>()
       .<span class="c-fn">escalar</span>();
   }
 };
 
-<span class="c-comment">// Pronto para começar?</span>
-<span class="c-var">adc</span>.<span class="c-fn">transformar</span>(seuNegócio);</code></pre>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<span class="c-comment">// Além do código, além do óbvio.</span><span class="code-cursor"></span></code></pre> </div> </div> </div> </div> </section> <script type="module">(function(){const t=document.querySelector("#sobre .code-block code");if(!t)return;const o=t.querySelector(".code-cursor");if(!o)return;const c=[];t.childNodes.forEach(e=>{e!==o&&(e.nodeType===3&&e.nodeValue?c.push({text:e.nodeValue}):e.nodeType===1&&c.push({cls:e.className,text:e.textContent||""}))}),Array.from(t.childNodes).forEach(e=>{e!==o&&t.removeChild(e)}),t.appendChild(o);let i=!1;function h(){if(i)return;i=!0;let e=0,s=0,n=null;function d(){if(e>=c.length)return;const r=c[e],l=r.text[s];if(s===0){if(r.cls){const a=document.createElement("span");a.className=r.cls,n=a}else n=document.createTextNode("");t.insertBefore(n,o)}n.nodeType===1?n.textContent+=l:n.nodeValue+=l,s++,s>=r.text.length&&(e++,s=0,n=null),setTimeout(d,l===`
+`||l===" "?4:16)}setTimeout(d,300)}const u=new IntersectionObserver(e=>{e[0].isIntersecting&&(h(),u.disconnect())},{threshold:.25}),f=document.getElementById("sobre");f&&u.observe(f)})();</script> <section class="section section-alt" id="projetos"> <div class="container"> <div class="section-header"> <div class="section-tag">Os nossos projetos</div> <h2 class="section-title">O Que <span class="gradient-text">Construímos</span></h2> <p class="section-sub">Plataformas e produtos tecnológicos desenvolvidos internamente, cada um a resolver um problema real no setor financeiro e imobiliário.</p> </div> <div class="projetos-grid"> <a href="https://www.crmcredito.pt" target="_blank" rel="noopener noreferrer" class="projeto-card cor-cyan"> <div class="projeto-header"> <div class="projeto-area">FinTech · Crédito</div> </div> <h3 class="projeto-nome">CRM Crédito</h3> <p class="projeto-desc">Plataforma CRM especializada para intermediários de crédito. Centraliza a gestão de processos, automatiza fluxos de trabalho e integra com bancos, substituindo folhas de cálculo por um sistema inteligente com painéis de IA.</p> <div class="projeto-tags"> <span class="tag">CRM</span><span class="tag">Automação</span><span class="tag">IA</span><span class="tag">Crédito Habitação</span> </div> <div class="projeto-link"> Visitar <span class="link-arrow">→</span> </div> </a><a href="https://www.creditocasa.pt" target="_blank" rel="noopener noreferrer" class="projeto-card cor-violet"> <div class="projeto-header"> <div class="projeto-area">PropTech · FinTech</div> </div> <h3 class="projeto-nome">CréditoCasa.pt</h3> <p class="projeto-desc">O primeiro portal em Portugal que combina pesquisa imobiliária com crédito habitação, usando Inteligência Artificial. O utilizador descreve o que procura em linguagem natural e a IA encontra o imóvel e o financiamento ideal.</p> <div class="projeto-tags"> <span class="tag">Imobiliário</span><span class="tag">IA Generativa</span><span class="tag">Crédito</span><span class="tag">Contactos</span> </div> <div class="projeto-link"> Visitar <span class="link-arrow">→</span> </div> </a><a href="https://www.simulasite.pt" target="_blank" rel="noopener noreferrer" class="projeto-card cor-green"> <div class="projeto-header"> <div class="projeto-area">SaaS · FinTech</div> </div> <h3 class="projeto-nome">SimulaSite</h3> <p class="projeto-desc">SaaS que permite a agências imobiliárias e intermediários de crédito incorporar simuladores financeiros nos seus sites, sem programação. Mais de 15 calculadoras disponíveis, instalação em menos de 2 minutos.</p> <div class="projeto-tags"> <span class="tag">SaaS</span><span class="tag">Simuladores</span><span class="tag">Imobiliário</span><span class="tag">Geração de leads</span> </div> <div class="projeto-link"> Visitar <span class="link-arrow">→</span> </div> </a><div class="projeto-card cor-cyan projeto-disabled"> <div class="projeto-header"> <div class="projeto-area">LegalTech · Automação</div> </div> <h3 class="projeto-nome">Pedir Documentos</h3> <p class="projeto-desc">Plataforma para simplificar o pedido e gestão de documentos. Automatiza processos burocráticos, tornando-os mais rápidos e acessíveis.</p> <div class="projeto-tags"> <span class="tag">Documentos</span><span class="tag">Automação</span><span class="tag">Legal</span> </div> <div class="projeto-link projeto-link-muted"> Brevemente </div> </div><div class="projeto-card cor-violet" data-open-modal role="button" tabindex="0"> <div class="projeto-header"> <div class="projeto-area">FinTech · Compliance BdP</div> </div> <h3 class="projeto-nome">Sites para Intermediários de Crédito</h3> <p class="projeto-desc">Criamos sites profissionais para intermediários de crédito registados no Banco de Portugal: identidade única, conteúdo legal obrigatório e posicionamento digital desde o primeiro dia.</p> <div class="projeto-tags"> <span class="tag">Banco de Portugal</span><span class="tag">Identidade Digital</span><span class="tag">Compliance</span><span class="tag">Intermediários</span> </div> <div class="projeto-link"> Pedir orçamento <span class="link-arrow">→</span> </div> </div> </div> </div> </section> <div class="sites-modal-overlay" id="sitesModalOverlay"> <div class="sites-modal" role="dialog" aria-modal="true"> <button class="modal-close-x" id="modalCloseX" aria-label="Fechar"> <svg width="16" height="16" fill="none" viewBox="0 0 24 24"> <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path> </svg> </button> <h3 class="modal-title">O que está incluído</h3> <p class="modal-subtitle">Tudo o que precisas para marcar presença online com profissionalismo e conformidade com as normas do Banco de Portugal.</p> <ul class="modal-features"> <li> <span class="modal-check">✓</span> <span>Identidade visual única e profissional</span> </li><li> <span class="modal-check">✓</span> <span>Conformidade com as normas do Banco de Portugal</span> </li><li> <span class="modal-check">✓</span> <span>SEO técnico otimizado desde o primeiro dia</span> </li><li> <span class="modal-check">✓</span> <span>Blog e notícias para posicionamento orgânico</span> </li><li> <span class="modal-check">✓</span> <span>Formulário de contacto e captura de leads</span> </li><li> <span class="modal-check">✓</span> <span>Domínio e hospedagem: adquira connosco ou configuramos o seu</span> </li><li> <span class="modal-check">✓</span> <span>Integração com SimulaSite (simuladores financeiros)</span> </li><li> <span class="modal-check">✓</span> <span>Design adaptado a mobile (100% responsive)</span> </li><li> <span class="modal-check">✓</span> <span>Site 100% seu, com acesso total e sem dependências</span> </li><li> <span class="modal-check">✓</span> <span>Política de privacidade e RGPD pré-configurados</span> </li><li> <span class="modal-check">✓</span> <span>Painel para gerir conteúdo de forma autónoma</span> </li><li> <span class="modal-check">✓</span> <span>Google Analytics integrado: visitas, leads e tráfego em tempo real</span> </li> </ul> <div class="modal-actions"> <button class="modal-cta-btn" id="modalCta">Pedir orçamento →</button> <button class="modal-cancel-btn" id="modalCloseBtn">Fechar</button> </div> </div> </div> <script>(function(){const ctaSelectOption = "Sites para Intermediários de Crédito";
 
-  <!-- CONTACTO -->
-  <section class="section section-contact" id="contacto">
-    <div class="container">
-      <div class="contact-grid">
-        <div class="contact-info">
-          <div class="section-tag">Contacto</div>
-          <h2 class="section-title">Vamos <span class="gradient-text">conversar</span></h2>
-          <p class="contact-sub">Diga-nos o seu desafio. Respondemos em menos de 24 horas com uma perspetiva honesta sobre como podemos ajudar.</p>
-          <div class="contact-details">
-            <div class="contact-item">
-              <div class="contact-icon">📍</div>
-              <div>
-                <strong>Morada</strong>
-                <p>R. Dom Francisco Gomes 4 1A<br />8000-306, Faro, Portugal</p>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-icon">📞</div>
-              <div>
-                <strong>Telefone</strong>
-                <p><a href="tel:+351967015157">+351 967 015 157</a></p>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-icon">✉️</div>
-              <div>
-	                <strong>E-mail</strong>
-	                <p><a href="mailto:geral@alemdocodigo.pt">geral@alemdocodigo.pt</a></p>
-	              </div>
-	            </div>
-	          </div>
-	        </div>
-	        <div class="contact-form-wrap">
-	          <form class="contact-form" id="contactForm" novalidate>
+  const overlay = document.getElementById('sitesModalOverlay');
 
-	            <div class="form-row">
-	              <div class="form-group">
-	                <label for="nome">Nome</label>
-	                <input type="text" id="nome" name="nome" placeholder="O seu nome" required aria-describedby="erro-nome" />
-                  <p class="field-error" id="erro-nome" aria-live="polite"></p>
-	              </div>
-	              <div class="form-group">
-	                <label for="empresa">Empresa</label>
-	                <input type="text" id="empresa" name="empresa" placeholder="Nome da empresa" />
-	              </div>
-	            </div>
-	            <div class="form-group">
-	              <label for="email">E-mail</label>
-	              <input type="email" id="email" name="email" placeholder="email@empresa.pt" required aria-describedby="erro-email" />
-                <p class="field-error" id="erro-email" aria-live="polite"></p>
-	            </div>
-	            <div class="form-group">
-	              <label for="servico">Serviço de interesse</label>
-	              <select id="servico" name="servico" aria-describedby="erro-servico">
-	                <option value="">Selecione um serviço</option>
-	                <option>Consultoria em IA</option>
-	                <option>Automação de Processos</option>
-                <option>Desenvolvimento de Software</option>
-                <option>Dados &amp; Informação</option>
-                <option>Formação &amp; Capacitação</option>
-	                <option>Outro</option>
-	              </select>
-                <p class="field-error" id="erro-servico" aria-live="polite"></p>
-	            </div>
-	            <div class="form-group">
-	              <label for="mensagem">Mensagem</label>
-	              <textarea id="mensagem" name="mensagem" rows="4" placeholder="Descreva o seu desafio ou projeto..." required aria-describedby="erro-mensagem"></textarea>
-                <p class="field-error" id="erro-mensagem" aria-live="polite"></p>
-	            </div>
-	            <button type="submit" class="btn-primary btn-full">
-	              <span>Enviar Mensagem</span>
-	              <svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-	            </button>
-              <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-	          </form>
-	        </div>
-	      </div>
-	    </div>
-	  </section>
-  </main>
+  function openModal() {
+    overlay?.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-inner">
-        <div class="footer-brand">
-          <a href="/" class="logo">
-            <span class="logo-symbol">&lt;</span>além do código<span class="logo-symbol">/&gt;</span>
-          </a>
-          <p>Consultoria em IA &amp; Tecnologia<br />Faro, Portugal</p>
-        </div>
-        <div class="footer-links">
-          <div class="footer-col">
-            <strong>Serviços</strong>
-            <a href="#servicos">Consultoria em IA</a>
-            <a href="#servicos">Automação</a>
-            <a href="#servicos">Desenvolvimento</a>
-            <a href="#servicos">Dados e análise</a>
-          </div>
-          <div class="footer-col">
-            <strong>Empresa</strong>
-            <a href="#sobre">Sobre nós</a>
-            <a href="#processo">Metodologia</a>
-            <a href="#contacto">Contacto</a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Além do Código. Todos os direitos reservados.</p>
-        <p>Feito com IA em Portugal 🇵🇹</p>
-      </div>
-    </div>
-  </footer>
+  function closeModal() {
+    overlay?.classList.remove('active');
+    document.body.style.overflow = '';
+  }
 
-  <!-- COOKIE BANNER -->
-  <div id="cookieBanner" class="cookie-banner" role="dialog" aria-label="Aviso de cookies" aria-live="polite">
-    <div class="cookie-inner">
-      <div class="cookie-text">
-        <div class="cookie-label"><span class="cookie-dot"></span>Cookies</div>
-        <p>Este site usa <strong>cookies essenciais</strong> para garantir o funcionamento correto e guardar as suas preferências. Não utilizamos cookies de rastreamento, publicidade ou partilha de dados com terceiros.</p>
-      </div>
-      <div class="cookie-actions">
-        <button class="cookie-btn cookie-reject" id="cookieReject">Rejeitar</button>
-        <button class="cookie-btn cookie-accept" id="cookieAccept">Aceitar</button>
-      </div>
-    </div>
-  </div>
+  document.querySelectorAll('[data-open-modal]').forEach((btn) => {
+    btn.addEventListener('click', openModal);
+    btn.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(); }
+    });
+  });
 
-  <script src="script.js"></script>
-</body>
-</html>
+  overlay?.addEventListener('click', (e) => {
+    if (e.target === overlay) closeModal();
+  });
+
+  document.getElementById('modalCloseX')?.addEventListener('click', closeModal);
+  document.getElementById('modalCloseBtn')?.addEventListener('click', closeModal);
+
+  document.getElementById('modalCta')?.addEventListener('click', () => {
+    closeModal();
+    setTimeout(() => {
+      const select = document.getElementById('cf-servico');
+      if (select) select.value = ctaSelectOption;
+      document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 200);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+  });
+})();</script> <section class="section section-contact" id="contacto"> <div class="container"> <div class="contact-grid"> <div class="contact-panel"> <div class="panel-header"> <div class="panel-dots"> <button class="pd red" id="dotRed" aria-label="WhatsApp"> <span class="pd-tooltip">WhatsApp</span> </button> <button class="pd yellow" id="dotYellow" aria-label="Ligar"> <span class="pd-tooltip">Ligar</span> </button> <button class="pd green" id="dotGreen" aria-label="Escrever mensagem"> <span class="pd-tooltip">Escrever mensagem</span> </button> </div> <span class="panel-title">connection.init</span> <span class="panel-ping"> <span class="ping-dot"></span> online </span> </div> <div class="panel-body"> <div class="section-tag">Contacto</div> <h2 class="section-title">Vamos <span class="gradient-text">Conversar</span></h2> <p class="panel-desc">Tens curiosidade sobre os nossos produtos? Fala connosco, explora uma parceria ou deixa-nos a tua opinião.</p> <div class="conn-nodes"> <div class="conn-node"> <div class="node-icon"> <svg width="18" height="18" fill="none" viewBox="0 0 24 24"> <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"></circle> </svg> </div> <div class="node-info"> <span class="node-label">Localização</span> <span class="node-value">R. Dom Francisco Gomes 4 1A, Faro</span> </div> <div class="node-status"></div> </div> <div class="conn-line"></div> <div class="conn-node"> <div class="node-icon"> <svg width="18" height="18" fill="none" viewBox="0 0 24 24"> <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.82 19.79 19.79 0 01.12 2.18 2 2 0 012.11 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.46-.46a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </svg> </div> <div class="node-info"> <span class="node-label">Telefone / WhatsApp</span> <a href="tel:+351967015157" class="node-value node-link">+351 967 015 157</a> </div> <div class="node-status"></div> </div> </div> <div class="terminal-hint"> <span class="th-prompt">$</span> <span class="th-cmd" id="terminalCmd"></span> <span class="code-cursor"></span> </div> </div> </div> <div class="contact-form-panel"> <form class="contact-form" id="contactForm" action="https://formspree.io/f/mvzbnyjo" method="POST" novalidate> <div class="cf-row"> <div class="cf-group"> <label for="cf-nome">Nome</label> <input type="text" id="cf-nome" name="nome" placeholder="O teu nome" required> <span class="cf-error" id="err-nome"></span> </div> <div class="cf-group"> <label for="cf-empresa">Empresa</label> <input type="text" id="cf-empresa" name="empresa" placeholder="Nome da tua empresa"> </div> </div> <div class="cf-row"> <div class="cf-group"> <label for="cf-email">E-mail</label> <input type="email" id="cf-email" name="email" placeholder="email@empresa.pt" required> <span class="cf-error" id="err-email"></span> </div> <div class="cf-group"> <label for="cf-contacto">Contacto</label> <input type="tel" id="cf-contacto" name="contacto" placeholder="+351 9XX XXX XXX"> </div> </div> <div class="cf-group"> <label for="cf-servico">O que te trouxe aqui?</label> <div class="cf-select-wrap"> <select id="cf-servico" name="servico" required> <option value="">Selecionar...</option> <option>CRM Crédito</option><option>CréditoCasa.pt</option><option>SimulaSite</option><option>Pedir Documentos</option><option>Sites para Intermediários de Crédito</option><option>Parceria</option><option>Outro</option> </select> <svg class="cf-select-arrow" width="14" height="14" fill="none" viewBox="0 0 24 24"> <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </svg> </div> <span class="cf-error" id="err-servico"></span> </div> <div class="cf-group cf-group-grow"> <label for="cf-msg">Mensagem</label> <textarea id="cf-msg" name="mensagem" placeholder="Tens alguma questão sobre os nossos produtos, ou queres explorar uma parceria?" required></textarea> <span class="cf-error" id="err-msg"></span> </div> <button type="submit" class="cf-submit" id="cfSubmit"> <span class="cf-submit-text">Enviar Mensagem</span> <svg class="cf-submit-icon" width="16" height="16" fill="none" viewBox="0 0 24 24"> <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </svg> </button> </form> </div> </div> </div> </section> <script>(function(){const terminalCommands = ["ligar +351 967 015 157","explorar --projetos crmcredito.pt","whatsapp +351967015157"];
+const submitTexts = {"default":"Enviar Mensagem","sending":"A enviar...","success":"Mensagem enviada ✓"};
+const validationTexts = {"required":"Campo obrigatório","email":"E-mail inválido"};
+
+  document.getElementById("dotRed")?.addEventListener("click", () => {
+    window.open("https://wa.me/351967015157", "_blank");
+  });
+
+  document.getElementById("dotYellow")?.addEventListener("click", () => {
+    window.location.href = "tel:+351967015157";
+  });
+
+  document.getElementById("dotGreen")?.addEventListener("click", () => {
+    const msg = document.getElementById("cf-msg");
+    if (msg) {
+      msg.scrollIntoView({ behavior: "smooth", block: "center" });
+      setTimeout(() => msg.focus(), 400);
+    }
+  });
+
+  let ci = 0;
+  let ci2 = 0;
+  let deleting = false;
+  const terminalEl = document.getElementById("terminalCmd");
+
+  if (terminalEl) {
+    function typeCmd() {
+      const cmd = terminalCommands[ci];
+      if (!deleting) {
+        terminalEl.textContent = cmd.slice(0, ci2 + 1);
+        ci2++;
+        if (ci2 === cmd.length) {
+          deleting = true;
+          setTimeout(typeCmd, 1800);
+          return;
+        }
+      } else {
+        terminalEl.textContent = cmd.slice(0, ci2 - 1);
+        ci2--;
+        if (ci2 === 0) {
+          deleting = false;
+          ci = (ci + 1) % terminalCommands.length;
+        }
+      }
+      setTimeout(typeCmd, deleting ? 32 : 58);
+    }
+
+    setTimeout(typeCmd, 600);
+  }
+
+  function setError(id, msg) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.textContent = msg;
+    el.style.display = msg ? 'block' : 'none';
+    const group = el.closest('.cf-group');
+    if (group) group.classList.toggle('has-error', !!msg);
+  }
+
+  function validateForm() {
+    let valid = true;
+    const nome = document.getElementById('cf-nome');
+    const email = document.getElementById('cf-email');
+    const servico = document.getElementById('cf-servico');
+    const msg = document.getElementById('cf-msg');
+
+    if (!nome.value.trim()) { setError('err-nome', validationTexts.required); valid = false; }
+    else setError('err-nome', '');
+
+    const emailVal = email.value.trim();
+    if (!emailVal) { setError('err-email', validationTexts.required); valid = false; }
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) { setError('err-email', validationTexts.email); valid = false; }
+    else setError('err-email', '');
+
+    if (!servico.value) { setError('err-servico', validationTexts.required); valid = false; }
+    else setError('err-servico', '');
+
+    if (!msg.value.trim()) { setError('err-msg', validationTexts.required); valid = false; }
+    else setError('err-msg', '');
+
+    return valid;
+  }
+
+  const form = document.getElementById("contactForm");
+  const btn = document.getElementById("cfSubmit");
+
+  if (form && btn) {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      if (!validateForm()) return;
+      const span = btn.querySelector(".cf-submit-text");
+      btn.disabled = true;
+      span.textContent = submitTexts.sending;
+      btn.classList.add("sending");
+
+      try {
+        const res = await fetch(form.action, {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+          },
+          body: new FormData(form),
+        });
+
+        if (!res.ok) throw new Error();
+
+        span.textContent = submitTexts.success;
+        btn.classList.remove("sending");
+        btn.classList.add("sent");
+        setTimeout(() => {
+          span.textContent = submitTexts.default;
+          btn.disabled = false;
+          btn.classList.remove("sent");
+          form.reset();
+        }, 3000);
+      } catch {
+        span.textContent = submitTexts.default;
+        btn.disabled = false;
+        btn.classList.remove("sending");
+      }
+    });
+  }
+})();</script> <footer class="footer"> <div class="footer-glow"></div> <div class="container"> <div class="footer-inner"> <!-- Brand --> <div class="footer-brand"> <a href="#" class="logo"> <span class="logo-symbol">&lt;</span>além do código<span class="logo-symbol">/&gt;</span> </a> <p class="footer-tagline">Empresa de Tecnologia &amp; IA</p> <p class="footer-location"> <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;margin-right:4px"> <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path> <circle cx="12" cy="10" r="3" stroke-linecap="round"></circle> </svg>
+Faro, Portugal
+</p> </div> <!-- Links --> <div class="footer-links"> <div class="footer-col"> <strong>Projetos</strong> <a href="https://www.crmcredito.pt" target="_blank" rel="noopener">CRM Crédito</a> <a href="https://www.creditocasa.pt" target="_blank" rel="noopener">CréditoCasa.pt</a> <a href="https://www.simulasite.pt" target="_blank" rel="noopener">SimulaSite</a> <span class="footer-link-muted">Pedir Documentos</span> </div> <div class="footer-col"> <strong>Empresa</strong> <a href="#sobre">Sobre nós</a> <a href="#projetos">Os nossos projetos</a> <a href="#contacto">Contacto</a> </div> <div class="footer-col"> <strong>Legal</strong> <a href="/termos">Termos e Condições</a> <a href="/privacidade">Política de Privacidade</a> </div> </div> </div> <!-- Bottom bar --> <div class="footer-bottom"> <p>© 2026 Além do Código. Todos os direitos reservados.</p> </div> </div> </footer> <script type="module" src="/_astro/index.astro_astro_type_script_index_0_lang.BfzYjZ_i.js"></script>  </body></html>
