@@ -9,7 +9,8 @@
       "Bash(curl -s -X POST \"https://formsubmit.co/ajax/andre@alemdocodigo.pt\" -H \"Content-Type: application/json\" -H \"Accept: application/json\" -d '{\"\"nome\"\":\"\"Teste Claude Code\"\",\"\"empresa\"\":\"\"Alem do Codigo\"\",\"\"email\"\":\"\"andre@alemdocodigo.pt\"\",\"\"contacto\"\":\"\"+351 967 015 157\"\",\"\"servico\"\":\"\"SimulaSite\"\",\"\"mensagem\"\":\"\"Teste do formulario via FormSubmit. Se recebeste este email, o formulario esta a funcionar!\"\",\"\"_subject\"\":\"\"Novo contacto — Site Além do Código\"\",\"\"_captcha\"\":\"\"false\"\",\"\"_template\"\":\"\"table\"\"}')",
       "Bash(npm install)",
       "Bash(npm run build)",
-      "WebFetch(domain:lusoinvoice.pt)"
+      "WebFetch(domain:lusoinvoice.pt)",
+      "WebFetch(domain:www.linkedin.com)"
     ]
   }
 }

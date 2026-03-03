@@ -229,17 +229,27 @@ async function goTo(stateKey) {
 const inputEl = document.getElementById("hciInput");
 
 const routes = [
-  { keys: ["crmcredito", "crm"], next: "crmcredito" },
-  { keys: ["creditocasa", "casa", "home", "house", "imovel", "imóvel", "vivienda", "logement", "habitacao", "habitação", "mortgage"], next: "creditocasa" },
-  { keys: ["simulasite", "simulador", "simulator", "calculadora", "calculator", "simulateur", "widget", "embed"], next: "simulasite" },
-  { keys: ["lusoinvoice", "luso", "invoice", "fatura", "faturacao", "faturação", "stripe", "invoicexpress"], next: "lusoinvoice" },
-  { keys: ["pededir", "documento", "documentos", "document", "documents", "pedir doc"], next: "pededirdoc" },
-  { keys: ["site intermediario", "sites intermediarios", "intermediario", "intermediários", "banco de portugal", "compliance", "bdp"], next: "sitesIntermediarios" },
-  { keys: ["projeto", "projetos", "project", "projects", "producto", "productos", "produto", "produtos", "product", "products"], next: "projetos" },
-  { keys: ["tecnologia", "technology", "ia", "ai", "inteligencia", "inteligência", "intelligence", "llm", "machine learning"], next: "tecnologia" },
-  { keys: ["quem", "somos", "who", "about", "equipa", "team", "sobre"], next: "quemSomos" },
-  { keys: ["contacto", "contact", "contato", "mail", "email", "telefone", "phone", "onde", "morada", "faro", "whatsapp", "ligar", "mensagem"], next: "contacto" },
-  { keys: ["preco", "preço", "price", "custo", "cost", "orcamento", "orçamento", "quanto custa", "budget"], next: "falarConnosco" },
+  // ── Specific products (most specific first) ──
+  { keys: ["crmcredito", "crm credito", "crm"], next: "crmcredito" },
+  { keys: ["creditocasa", "credito casa", "casa", "home", "house", "imovel", "habitacao", "mortgage"], next: "creditocasa" },
+  { keys: ["simulasite", "simula site", "simulador", "simulator", "calculadora", "calculator", "widget", "embed"], next: "simulasite" },
+  { keys: ["lusoinvoice", "luso invoice", "luso", "invoice", "fatura", "faturacao", "stripe", "invoicexpress"], next: "lusoinvoice" },
+  { keys: ["pededir", "pedir doc", "documento", "documentos", "document", "documents"], next: "pededirdoc" },
+  { keys: ["site intermediario", "sites intermediarios", "intermediario", "banco de portugal", "compliance", "bdp"], next: "sitesIntermediarios" },
+  // ── Contact (before technology to avoid short "ai" matching "mail") ──
+  { keys: ["contacto", "contact", "contato", "email", "mail", "telefone", "phone", "onde ficam", "onde estao", "onde", "morada", "faro", "whatsapp", "ligar", "mensagem", "endereco", "localizacao", "location", "address", "horario"], next: "contacto" },
+  // ── Pricing, partnership, demo ──
+  { keys: ["preco", "price", "custo", "cost", "orcamento", "quanto custa", "budget", "parceria", "partnership", "demo", "demonstracao", "experimentar", "testar", "trial", "agendar", "reuniao", "meeting", "proposta", "proposal"], next: "falarConnosco" },
+  // ── What do you do / About ──
+  { keys: ["fazem", "fazer", "o que fazem", "what do you do", "atividade", "negocio", "empresa", "company", "missao", "mission", "trabalham", "objetivo", "proposito", "quem sao", "quem", "somos", "who", "about", "equipa", "team", "sobre", "historia", "alem do codigo", "beyond code"], next: "quemSomos" },
+  // ── Projects / Services (generic) ──
+  { keys: ["projeto", "projetos", "project", "projects", "produto", "produtos", "product", "products", "servico", "servicos", "service", "services", "solucao", "solucoes", "solution", "solutions", "oferecem", "plataforma", "portfolio"], next: "projetos" },
+  // ── Technology ──
+  { keys: ["tecnologia", "technology", "inteligencia artificial", "artificial intelligence", "machine learning", "llm", "automacao", "automation", "como funciona", "how it works", "ia", "ai"], next: "tecnologia" },
+  // ── Generic credit & real estate → projects overview ──
+  { keys: ["credito", "credit", "financiamento", "financing", "emprestimo", "loan", "hipoteca", "imobiliario", "imoveis", "real estate", "property", "apartamento", "moradia", "comprar casa"], next: "projetos" },
+  // ── Greetings & help (most generic — last) ──
+  { keys: ["ola", "bom dia", "boa tarde", "boa noite", "hello", "hey", "comecar", "inicio", "start", "recomecar", "voltar", "ajuda", "help", "informacao", "info", "duvida"], next: "start" },
 ];
 
 function normalize(str) {
